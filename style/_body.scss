@@ -3,7 +3,11 @@
 .work-section {
 	width: 95%;
 	margin: auto;
-	margin-bottom: 10rem;
+	margin-bottom: 20rem;
+	position: relative;
+	h1 {
+		margin: 0 0 2rem 2rem;
+	}
 }
 
 .work-card {
@@ -56,7 +60,7 @@
 	margin: auto;
 	position: relative;
 	h1 {
-		margin-left: 4rem;
+		margin: 0 0 2rem 2rem;
 	}
 }
 
@@ -87,6 +91,10 @@
 		grid-template-columns: repeat(3, 1fr);
 		grid-gap: 2rem;
 	}
+}
+
+.icons-collection svg path {
+	@include shadow();
 }
 
 .icons-collection:hover svg {

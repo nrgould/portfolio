@@ -10,11 +10,26 @@ body.light {
 	}
 }
 
+.work-card.light {
+	background-color: white;
+	border: 1px solid #dbdbdb;
+
+	h2,
+	h3,
+	p {
+		color: $bg-color;
+	}
+}
+
 .skills-card.light {
 	background-color: $prim-text-color;
 	h3 {
 		color: $bg-color;
 	}
+}
+
+.icons-collection.light svg path {
+	fill: $bg-color;
 }
 
 .toggle-appearance svg.light {

@@ -182,6 +182,21 @@ body.hide {
   font-size: 4rem;
 }
 
+.nav-links ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
 .nav-links li a {
   color: white;
 }
@@ -213,24 +228,37 @@ body.hide {
   width: 95%;
   margin: auto;
   min-height: 90vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin-bottom: 20rem;
 }
 
 .hero-title {
   margin: 4rem 2rem;
 }
 
-.hero-title h1,
-.hero-title h2 {
+.hero-title h1 {
+  font-size: 6rem;
   text-align: center;
   margin-bottom: 2rem;
 }
 
-.hero-title h1 {
-  font-size: 6rem;
-}
-
-.hero-title h3 {
+.hero-title h2 {
   font-size: 8rem;
+  margin-bottom: 2rem;
 }
 
 .hero-anim {
@@ -271,7 +299,12 @@ body.hide {
 .work-section {
   width: 95%;
   margin: auto;
-  margin-bottom: 10rem;
+  margin-bottom: 20rem;
+  position: relative;
+}
+
+.work-section h1 {
+  margin: 0 0 2rem 2rem;
 }
 
 .work-card {
@@ -357,7 +390,7 @@ body.hide {
 }
 
 .skills-section h1 {
-  margin-left: 4rem;
+  margin: 0 0 2rem 2rem;
 }
 
 .skills-wrapper {
@@ -405,6 +438,11 @@ body.hide {
   -ms-grid-columns: (1fr)[3];
       grid-template-columns: repeat(3, 1fr);
   grid-gap: 2rem;
+}
+
+.icons-collection svg path {
+  -webkit-box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.2);
+          box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.2);
 }
 
 .icons-collection:hover svg {
@@ -468,12 +506,27 @@ body.light {
   color: #353a3e;
 }
 
+.work-card.light {
+  background-color: white;
+  border: 1px solid #dbdbdb;
+}
+
+.work-card.light h2,
+.work-card.light h3,
+.work-card.light p {
+  color: #353a3e;
+}
+
 .skills-card.light {
   background-color: #ecfffb;
 }
 
 .skills-card.light h3 {
   color: #353a3e;
+}
+
+.icons-collection.light svg path {
+  fill: #353a3e;
 }
 
 .toggle-appearance svg.light #toggle-moon {
