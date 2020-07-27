@@ -1,0 +1,38 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:ital,wght@0,300;0,700;1,300&family=Raleway:ital,wght@0,300;0,400;0,500;0,592;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+$header1: 6rem;
+$header2: 4rem;
+$header3: 3.5rem;
+$header4: 2.4rem;
+$header5: 1.2rem;
+$text: 2rem;
+$grey-text: #2c2c2c;
+$bg-color: #353a3e;
+$prim-text-color: #ecfffb;
+$sec-text-color: #2d767f;
+$dark-card-color: #272b2e;
+$green1: #00a295;
+$green2: #5dd98a;
+
+@mixin flex($justify, $align, $direction) {
+	display: flex;
+	justify-content: $justify;
+	align-items: $align;
+	flex-direction: $direction;
+}
+
+@mixin expand() {
+	transition: all 200ms;
+	&:hover {
+		transform: scale(1.05);
+	}
+}
+
+@mixin shadow() {
+	box-shadow: 0px 3px 6px rgba($color: #000000, $alpha: 0.2);
+}
+
+@import "global";
+@import "intro";
+@import "body";
+@import "active";

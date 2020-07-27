@@ -1,0 +1,135 @@
+//NAV SECTION
+
+nav {
+	min-height: 5vh;
+	background: linear-gradient(to right, $green1, $green2);
+	@include shadow();
+}
+
+#logo {
+	z-index: 2;
+}
+
+.nav-overlay {
+	position: fixed;
+	z-index: 1;
+	top: 0;
+	left: 0;
+	background: linear-gradient(to bottom right, $green1, $green2);
+	height: 100%;
+	width: 100%;
+	clip-path: circle(50px at 100% -10%);
+}
+
+.nav-header {
+	width: 95%;
+	margin: auto;
+	padding: 1rem;
+	@include flex(space-between, center, row);
+}
+
+body.hide {
+	overflow: hidden;
+}
+
+.line2.hide {
+	display: none;
+}
+
+.appearance-toggle {
+	cursor: pointer;
+	z-index: 2;
+}
+
+.appearance-toggle #toggle-bg {
+	@include shadow();
+}
+
+.burger {
+	@include flex(center, center, column);
+	z-index: 2;
+	cursor: pointer;
+	.line1,
+	.line2,
+	.line3 {
+		height: 0.5rem;
+		width: 4rem;
+		background-color: white;
+		// margin-bottom: 0.8rem;
+		pointer-events: none;
+		@include shadow();
+	}
+	.line1,
+	.line2 {
+		margin-bottom: 0.8rem;
+	}
+}
+
+.nav-links {
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
+	font-size: 4rem;
+	ul {
+		// @include flex(space-around, center, column);
+	}
+	li a {
+		color: white;
+	}
+}
+
+.social-icons {
+	padding: 2rem;
+	position: fixed;
+	width: 100%;
+	bottom: 0;
+	left: 0;
+	ul {
+		@include flex(space-around, center, row);
+	}
+}
+
+//HERO SECTION
+
+.hero-section {
+	width: 95%;
+	margin: auto;
+	min-height: 90vh;
+}
+
+.hero-title {
+	margin: 4rem 2rem;
+	h1,
+	h2 {
+		text-align: center;
+		margin-bottom: 2rem;
+	}
+	h1 {
+		font-size: 6rem;
+	}
+	h3 {
+		font-size: 8rem;
+	}
+}
+
+.hero-anim {
+	position: relative;
+	width: 80%;
+	margin: auto;
+	@include flex(center, center, column);
+}
+
+.box1,
+.box2 {
+	width: 6rem;
+	height: 6rem;
+	@include shadow();
+}
+
+.box1 {
+	background-color: $green1;
+}
+.box2 {
+	background-color: $green2;
+}

@@ -1,0 +1,27 @@
+body.light {
+	background-color: $prim-text-color;
+}
+
+.hero-title.light {
+	transition: all 1s ease-in-out;
+	h1,
+	h2 {
+		color: $bg-color;
+	}
+}
+
+.skills-card.light {
+	background-color: $prim-text-color;
+	h3 {
+		color: $bg-color;
+	}
+}
+
+.toggle-appearance svg.light {
+	#toggle-moon {
+		color: white;
+	}
+	#toggle-bg {
+		color: $bg-color;
+	}
+}
