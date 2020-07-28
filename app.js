@@ -95,7 +95,6 @@ function scrollReveal() {
 			reverse: false,
 		})
 			.setTween(pageTl)
-			.addIndicators()
 			.addTo(controller);
 	});
 }

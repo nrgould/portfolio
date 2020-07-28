@@ -98,7 +98,6 @@ nav {
   width: 100%;
   -webkit-clip-path: circle(50px at 100% -10%);
           clip-path: circle(50px at 100% -10%);
-  display: none;
 }
 
 .nav-header {
