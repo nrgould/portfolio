@@ -121,6 +121,11 @@ body.hide {
 	margin-bottom: 20rem;
 }
 
+.hero-wrapper {
+	@include flex(center, space-between, row);
+	flex-wrap: wrap;
+}
+
 .hero-title {
 	margin: 4rem 2rem;
 	h1 {
@@ -133,11 +138,14 @@ body.hide {
 		margin-bottom: 2rem;
 	}
 }
-
-.hero-anim {
+.hero-anim-section {
 	position: relative;
-	width: 80%;
-	margin: auto;
+}
+.hero-anim {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
 	@include flex(center, center, column);
 }
 
