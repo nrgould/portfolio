@@ -92,6 +92,7 @@ function scrollReveal() {
 			triggerElement: el,
 			triggerHook: 0.75,
 			duration: "50%",
+			reverse: false,
 		})
 			.setTween(pageTl)
 			.addIndicators()
@@ -101,9 +102,12 @@ function scrollReveal() {
 
 //NAV TOGGLE
 
+const navOverlay = document.querySelector(".nav-overlay");
+
 function navToggle(e) {
 	if (!e.target.classList.contains("active")) {
 		e.target.classList.add("active");
+		navOverlay.style.display = "initial";
 		gsap.to(".line1", 0.5, {
 			ease: "power3.inOut",
 			rotate: "45",

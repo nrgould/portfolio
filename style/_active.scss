@@ -2,6 +2,10 @@ body.light {
 	background-color: $prim-text-color;
 }
 
+.nav-links.light ul li a {
+	color: black;
+}
+
 .hero-title.light {
 	transition: all 1s ease-in-out;
 	h1,
