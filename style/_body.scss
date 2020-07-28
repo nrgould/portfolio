@@ -13,7 +13,7 @@
 .work-card {
 	background-color: $dark-card-color;
 	min-height: 50vh;
-	margin: 4rem 2rem;
+	margin: 4rem 0rem;
 	padding: 4rem 3rem;
 	@include shadow();
 	@include flex(space-around, center, column);
@@ -25,6 +25,9 @@
 	h2,
 	h3 {
 		text-align: center;
+	}
+	h3 {
+		font-size: 3rem;
 	}
 	p {
 		line-height: 4rem;
@@ -67,7 +70,7 @@
 .skills-wrapper {
 	position: relative;
 	display: grid;
-	grid-template-columns: repeat(auto-fill, minmax(300 px, 1fr));
+	grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
 }
 
 .skills-card {
@@ -90,6 +93,7 @@
 		justify-items: center;
 		grid-template-columns: repeat(3, 1fr);
 		grid-gap: 2rem;
+		transition: all 500ms ease;
 	}
 }
 

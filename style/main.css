@@ -199,6 +199,29 @@ body.hide {
 
 .nav-links li a {
   color: white;
+  font-size: 4rem;
+  line-height: 5rem;
+  font-weight: 700;
+}
+
+.nav-links li {
+  list-style-position: inside;
+}
+
+.nav-links li:nth-child(1) {
+  list-style-image: url("../svg/metro-wrench.svg");
+}
+
+.nav-links li:nth-child(2) {
+  list-style-image: url("../svg/Icon awesome-hammer.svg");
+}
+
+.nav-links li:nth-child(3) {
+  list-style-image: url("../svg/Icon awesome-trophy.svg");
+}
+
+.nav-links li:nth-child(4) {
+  list-style-image: url("../svg/Icon material-email.svg");
 }
 
 .social-icons {
@@ -257,7 +280,7 @@ body.hide {
 }
 
 .hero-title h2 {
-  font-size: 8rem;
+  font-size: 7rem;
   margin-bottom: 2rem;
 }
 
@@ -310,7 +333,7 @@ body.hide {
 .work-card {
   background-color: #272b2e;
   min-height: 50vh;
-  margin: 4rem 2rem;
+  margin: 4rem 0rem;
   padding: 4rem 3rem;
   -webkit-box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.2);
           box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.2);
@@ -337,6 +360,10 @@ body.hide {
 .work-card h2,
 .work-card h3 {
   text-align: center;
+}
+
+.work-card h3 {
+  font-size: 3rem;
 }
 
 .work-card p {
@@ -397,8 +424,8 @@ body.hide {
   position: relative;
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: (minmax(300 px, 1fr))[auto-fill];
-      grid-template-columns: repeat(auto-fill, minmax(300 px, 1fr));
+  -ms-grid-columns: (minmax(300px, 1fr))[auto-fill];
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
 }
 
 .skills-card {
@@ -438,6 +465,8 @@ body.hide {
   -ms-grid-columns: (1fr)[3];
       grid-template-columns: repeat(3, 1fr);
   grid-gap: 2rem;
+  -webkit-transition: all 500ms ease;
+  transition: all 500ms ease;
 }
 
 .icons-collection svg path {
@@ -529,11 +558,7 @@ body.light {
   fill: #353a3e;
 }
 
-.toggle-appearance svg.light #toggle-moon {
-  color: white;
-}
-
-.toggle-appearance svg.light #toggle-bg {
-  color: #353a3e;
+.toggle-appearance.light svg #toggle-bg {
+  fill: white;
 }
 /*# sourceMappingURL=main.css.map */

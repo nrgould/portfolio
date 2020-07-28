@@ -76,7 +76,27 @@ body.hide {
 	}
 	li a {
 		color: white;
+		font-size: 4rem;
+		line-height: 5rem;
+		font-weight: 700;
 	}
+}
+
+.nav-links li {
+	list-style-position: inside;
+}
+
+.nav-links li:nth-child(1) {
+	list-style-image: url("../svg/metro-wrench.svg");
+}
+.nav-links li:nth-child(2) {
+	list-style-image: url("../svg/Icon\ awesome-hammer.svg");
+}
+.nav-links li:nth-child(3) {
+	list-style-image: url("../svg/Icon\ awesome-trophy.svg");
+}
+.nav-links li:nth-child(4) {
+	list-style-image: url("../svg/Icon\ material-email.svg");
 }
 
 .social-icons {
@@ -109,7 +129,7 @@ body.hide {
 		margin-bottom: 2rem;
 	}
 	h2 {
-		font-size: 8rem;
+		font-size: 7rem;
 		margin-bottom: 2rem;
 	}
 }

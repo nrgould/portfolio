@@ -13,11 +13,20 @@ let pageScene;
 
 //for NAV
 const burger = document.querySelector(".burger");
+const navLinks = document.querySelector(".nav-links");
 
-//for skills
+//for work section
+const workCard = document.querySelectorAll(".work-card");
+const readMoreBtn = document.querySelectorAll(".read-more");
+
+//for skills section
 const skillIcon = document.querySelectorAll(".icons-collection svg");
 
 //EVENT LISTENERS
+
+readMoreBtn.forEach((btn) => {
+	btn.addEventListener("click", () => readMore(idx));
+});
 
 darkBtn.addEventListener("click", darkModeToggle);
 burger.addEventListener("click", navToggle);
@@ -83,7 +92,6 @@ function scrollReveal() {
 			duration: "50%",
 		})
 			.setTween(pageTl)
-			.addIndicators()
 			.addTo(controller);
 	});
 }
@@ -93,23 +101,80 @@ function scrollReveal() {
 function navToggle(e) {
 	if (!e.target.classList.contains("active")) {
 		e.target.classList.add("active");
-		gsap.to(".line1", 0.5, { rotate: "45", y: 13, background: "black" });
-		gsap.to(".line2", 0.2, { opacity: 0, background: "black" });
-		gsap.to(".line3", 0.5, { rotate: "-45", y: -13, background: "black" });
-		gsap.to("#logo", 1, { color: "black" });
-		gsap.to(".nav-overlay", 1, { clipPath: "circle(2500px at 100% -10%)" });
+		gsap.to(".line1", 0.5, {
+			ease: "power3.inOut",
+			rotate: "45",
+			y: 13,
+			background: "black",
+		});
+		gsap.to(".line2", 0.5, {
+			ease: "power3.inOut",
+			opacity: 0,
+			background: "black",
+		});
+		gsap.to(".line3", 0.5, {
+			ease: "power3.inOut",
+			rotate: "-45",
+			y: -13,
+			background: "black",
+		});
+		gsap.to("#logo", 1, { ease: "power3.inOut", color: "black" });
+		gsap.to(".nav-overlay", 1, {
+			ease: "power3.inOut",
+			clipPath: "circle(2500px at 100% -10%)",
+		});
 		document.body.classList.add("hide");
 		// document.querySelector(".line2").classList.add("hide");
 	} else {
 		e.target.classList.remove("active");
-		gsap.to(".line1", 0.5, { rotate: "0", y: 0, background: "white" });
-		gsap.to(".line2", 0.5, { opacity: 1, x: 0, background: "white" });
-		gsap.to(".line3", 0.5, { rotate: "0", y: 0, background: "white" });
-		gsap.to("#logo", 1, { color: "white" });
-		gsap.to(".nav-overlay", 1, { clipPath: "circle(50px at 100% -10%)" });
+		gsap.to(".line1", 0.5, {
+			ease: "power3.inOut",
+			rotate: "0",
+			y: 0,
+			background: "white",
+		});
+		gsap.to(".line2", 0.5, {
+			ease: "power3.inOut",
+			opacity: 1,
+			x: 0,
+			background: "white",
+		});
+		gsap.to(".line3", 0.5, {
+			ease: "power3.inOut",
+			rotate: "0",
+			y: 0,
+			background: "white",
+		});
+		gsap.to("#logo", 1, { ease: "power3.inOut", color: "white" });
+		gsap.to(".nav-overlay", 1, {
+			ease: "power3.inOut",
+			clipPath: "circle(50px at 100% -10%)",
+		});
 		document.body.classList.remove("hide");
 		// document.querySelector(".line2").classList.remove("hide");
 	}
+}
+
+navLinks.addEventListener("click", () => {
+	gsap.to(".line1", 0.5, { rotate: "0", y: 0, background: "white" });
+	gsap.to(".line2", 0.5, { opacity: 1, x: 0, background: "white" });
+	gsap.to(".line3", 0.5, { rotate: "0", y: 0, background: "white" });
+	gsap.to("#logo", 1, { color: "white" });
+	gsap.to(".nav-overlay", 1, { clipPath: "circle(50px at 100% -10%)" });
+	document.body.classList.remove("hide");
+});
+
+//READ MORE
+
+//on click, create element p
+//need to know which card we're activating
+// append to skills card
+//if statement to see if active
+//if active, click removes element
+//bonus: animating arrow icon
+
+function readMore(idx) {
+	console.log(idx);
 }
 
 //DARK MODE
@@ -120,21 +185,25 @@ function navToggle(e) {
 //modify each class individually
 function darkModeToggle() {
 	const darkItem = document.querySelectorAll(".dark-item");
-	if (darkBtn.classList.contains("light")) {
-		gsap.to(darkBtn, 0.2, { rotate: 360, ease: "power2.inOut" });
-		darkBtn.innerHTML = `<svgxmlns="http://www.w3.org/2000/svg"width="30"height="30"viewBox="0 0 30 30"><pathid="toggle-bg"class="dark-item"d="M15,0A15,15,0,1,1,0,15,15,15,0,0,1,15,0Z"fill="#272b2e"/><patclass="dark-itemid="toggle-moond="M18.846,16.436c-.119,0-.239.008-.358.008a7.252,7.252,0,0,1-5.216-2.2,7.494,7.494,0,0,1-2.16-5.3,7.588,7.588,0,0,1,.72-3.237,10.722,10.722,0,0,1,.559-.963.162.162,0,0,0-.16-.251,7.956,7.956,0,0,0,1.213,15.8,7.755,7.755,0,0,0,5.961-2.8,7.514,7.514,0,0,0,.675-.9.166.166,0,0,0-.169-.251A7.025,7.025,0,0,1,18.846,16.436Ztransform="translate(1.985 2.605)fill="#ffffff"/></svgxmlns=>`;
-	} else {
-		darkBtn.innerHTML =
-			'<svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30"><path d="M15,0A15,15,0,1,1,0,15,15,15,0,0,1,15,0Z" fill="#31363a"/><path d="M6.083,4.238,4.651,2.814,3.529,3.936,4.953,5.36Zm-2.2,4.5H1.5v1.591H3.887ZM11.048.825H9.456V3.172h1.591V.825Zm5.927,3.111L15.853,2.814,14.429,4.238,15.551,5.36l1.424-1.424Zm-2.554,10.9,1.424,1.432,1.122-1.122-1.432-1.424-1.114,1.114Zm2.2-6.095v1.591H19V8.742ZM10.252,4.763a4.774,4.774,0,1,0,4.774,4.774A4.778,4.778,0,0,0,10.252,4.763Zm-.8,13.486h1.591V15.9H9.456ZM3.529,15.138,4.651,16.26l1.424-1.432L4.953,13.706,3.529,15.138Z" transform="translate(5 5.138)" fill="#fff"/></svg>';
-	}
+	gsap.fromTo(darkBtn, 0.3, { ease: "power2.inOut", scale: 0.8 }, { scale: 1 });
+	gsap.fromTo(
+		darkBtn,
+		0.2,
+		{ ease: "power2.inOut", rotate: 0 },
+		{ rotate: -360 }
+	);
+	// if (darkBtn.classList.contains("light")) {
+	// 	gsap.to(darkBtn, 0.2, { rotate: 360, ease: "power2.inOut" });
+	// 	darkBtn.innerHTML = `<svgxmlns="http://www.w3.org/2000/svg"width="30"height="30"viewBox="0 0 30 30"><pathid="toggle-bg"class="dark-item"d="M15,0A15,15,0,1,1,0,15,15,15,0,0,1,15,0Z"fill="#272b2e"/><patclass="dark-itemid="toggle-moond="M18.846,16.436c-.119,0-.239.008-.358.008a7.252,7.252,0,0,1-5.216-2.2,7.494,7.494,0,0,1-2.16-5.3,7.588,7.588,0,0,1,.72-3.237,10.722,10.722,0,0,1,.559-.963.162.162,0,0,0-.16-.251,7.956,7.956,0,0,0,1.213,15.8,7.755,7.755,0,0,0,5.961-2.8,7.514,7.514,0,0,0,.675-.9.166.166,0,0,0-.169-.251A7.025,7.025,0,0,1,18.846,16.436Ztransform="translate(1.985 2.605)fill="#ffffff"/></svgxmlns=>`;
+	// } else {
+	// 	darkBtn.innerHTML =
+	// 		'<svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30"><path d="M15,0A15,15,0,1,1,0,15,15,15,0,0,1,15,0Z" fill="#31363a"/><path d="M6.083,4.238,4.651,2.814,3.529,3.936,4.953,5.36Zm-2.2,4.5H1.5v1.591H3.887ZM11.048.825H9.456V3.172h1.591V.825Zm5.927,3.111L15.853,2.814,14.429,4.238,15.551,5.36l1.424-1.424Zm-2.554,10.9,1.424,1.432,1.122-1.122-1.432-1.424-1.114,1.114Zm2.2-6.095v1.591H19V8.742ZM10.252,4.763a4.774,4.774,0,1,0,4.774,4.774A4.778,4.778,0,0,0,10.252,4.763Zm-.8,13.486h1.591V15.9H9.456ZM3.529,15.138,4.651,16.26l1.424-1.432L4.953,13.706,3.529,15.138Z" transform="translate(5 5.138)" fill="#fff"/></svg>';
+	// }
 	document.body.classList.toggle("light");
 	darkItem.forEach((item) => {
 		item.classList.toggle("light");
 	});
 }
-
-//BLUR ON HOVER
-// function hoverBlur(icon) {}
 
 boxAnim();
 scrollReveal();

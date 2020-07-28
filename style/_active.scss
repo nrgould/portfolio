@@ -32,11 +32,12 @@ body.light {
 	fill: $bg-color;
 }
 
-.toggle-appearance svg.light {
-	#toggle-moon {
-		color: white;
-	}
-	#toggle-bg {
-		color: $bg-color;
-	}
+.toggle-appearance.light svg #toggle-bg {
+	fill: white;
+	// #toggle-moon {
+	// 	color: white;
+	// }
+	// #toggle-bg {
+	// 	color: $bg-color;
+	// }
 }
