@@ -24,9 +24,9 @@ const skillIcon = document.querySelectorAll(".icons-collection svg");
 
 //EVENT LISTENERS
 
-readMoreBtn.forEach((btn) => {
-	btn.addEventListener("click", () => readMore(idx));
-});
+// readMoreBtn.forEach((btn) => {
+// 	btn.addEventListener("click", () => readMore(idx));
+// });
 
 darkBtn.addEventListener("click", darkModeToggle);
 burger.addEventListener("click", navToggle);
@@ -85,13 +85,16 @@ function scrollReveal() {
 			);
 		} else if (el.classList.contains("anim-left")) {
 			pageTl.fromTo(el, 1, { x: "100%", opacity: 0 }, { x: "0%", opacity: 1 });
+		} else if (el.classList.contains("anim-up")) {
+			pageTl.fromTo(el, 1, { y: "100%", opacity: 0 }, { y: "0%", opacity: 1 });
 		}
 		pageScene = new ScrollMagic.Scene({
 			triggerElement: el,
-			triggerHook: 1,
+			triggerHook: 0.75,
 			duration: "50%",
 		})
 			.setTween(pageTl)
+			.addIndicators()
 			.addTo(controller);
 	});
 }
@@ -173,11 +176,12 @@ navLinks.addEventListener("click", () => {
 //if active, click removes element
 //bonus: animating arrow icon
 
-function readMore(idx) {
-	console.log(idx);
-}
+// function readMore(idx) {
+// 	console.log(idx);
+// }
 
 //DARK MODE
+
 //select all items elligible to toggle from dark to light
 //check if classlist contains 'light'
 //switch darkBtn innerHTML

@@ -10,6 +10,15 @@ body.light {
 	}
 }
 
+.hero-anim.light svg path {
+	stroke: $bg-color;
+}
+
+.bg-text.light {
+	color: $bg-color;
+	opacity: 0.2;
+}
+
 .work-card.light {
 	background-color: white;
 	border: 1px solid #dbdbdb;
@@ -21,23 +30,29 @@ body.light {
 	}
 }
 
-.skills-card.light {
-	background-color: $prim-text-color;
-	h3 {
-		color: $bg-color;
+.skills-card.light,
+.contact-card.light {
+	background-color: white;
+	h3,
+	p,
+	a {
+		color: black;
 	}
 }
 
+.skills-card.light .top-icon .icon-bg {
+	background-color: black;
+}
 .icons-collection.light svg path {
-	fill: $bg-color;
+	fill: black;
 }
 
-.toggle-appearance.light svg #toggle-bg {
+.toggle-appearance.light svg path {
 	fill: white;
-	// #toggle-moon {
-	// 	color: white;
-	// }
-	// #toggle-bg {
-	// 	color: $bg-color;
-	// }
+}
+
+.contact-wrapper.light {
+	h1 {
+		color: $bg-color;
+	}
 }

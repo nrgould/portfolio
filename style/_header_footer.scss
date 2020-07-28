@@ -154,3 +154,23 @@ body.hide {
 .box2 {
 	background-color: $green2;
 }
+
+//FOOTER
+
+footer {
+	@include flex(center, center, column);
+	background-color: #131d1d;
+	padding: 2rem 0;
+	width: 100%;
+	h3 {
+		margin-bottom: 2rem;
+	}
+}
+
+.social-icons-footer {
+	padding: 2rem;
+	width: 100%;
+	ul {
+		@include flex(space-around, center, row);
+	}
+}

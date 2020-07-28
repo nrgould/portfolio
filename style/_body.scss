@@ -1,8 +1,7 @@
 //WORK SECTION
 
 .work-section {
-	width: 95%;
-	margin: auto;
+	@include width(95%);
 	margin-bottom: 20rem;
 	position: relative;
 	h1 {
@@ -10,10 +9,16 @@
 	}
 }
 
+.work-wrapper {
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(420px, 1fr));
+	grid-gap: 5rem;
+}
+
 .work-card {
 	background-color: $dark-card-color;
 	min-height: 50vh;
-	margin: 4rem 0rem;
+	margin: 4rem 2rem;
 	padding: 4rem 3rem;
 	@include shadow();
 	@include flex(space-around, center, column);
@@ -37,9 +42,10 @@
 .work-card-header {
 	@include flex(center, center, row);
 	margin: 0 2rem;
-	flex-wrap: wrap;
+	// flex-wrap: wrap;
 	img {
 		max-width: 10rem;
+		min-width: 8rem;
 		margin-bottom: 2rem;
 	}
 	h2 {
@@ -50,18 +56,26 @@
 
 .bg-text {
 	position: absolute;
-	top: 0;
+	top: -5%;
 	left: 0;
 	transform: translate(-10%, -50%);
 	opacity: 0.1;
 	font-size: 20rem;
 	text-align: center;
 }
+
+#work-bg-circle {
+	position: absolute;
+	z-index: -1;
+	top: 40%;
+	right: -50%;
+}
+
 //SKILLS SECTION
 .skills-section {
-	width: 95%;
-	margin: auto;
+	@include width(95%);
 	position: relative;
+	margin-bottom: 20rem;
 	h1 {
 		margin: 0 0 2rem 2rem;
 	}
@@ -70,7 +84,9 @@
 .skills-wrapper {
 	position: relative;
 	display: grid;
-	grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+	grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+	justify-content: center;
+	align-content: center;
 }
 
 .skills-card {
@@ -137,4 +153,55 @@
 	top: 75%;
 	left: -10%;
 	z-index: -1;
+}
+
+//CONTACT SECTION
+
+.contact-section {
+	@include width(95%);
+	margin-bottom: 10rem;
+}
+
+.contact-wrapper {
+	@include flex(center, center, column);
+	h1 {
+		text-align: center;
+		margin-bottom: 4rem;
+	}
+}
+
+.contact-card {
+	background-color: $dark-card-color;
+	min-height: 50vh;
+	padding: 3rem;
+	border: 7px solid;
+	border-image-slice: 1;
+	border-image-source: linear-gradient(to bottom right, $green1, $green2);
+	@include shadow();
+	@include flex(space-around, center, column);
+	flex-wrap: wrap;
+	h3 {
+		text-align: center;
+		margin-bottom: 3rem;
+		color: white;
+	}
+	a {
+		font-size: 3rem;
+		color: white;
+		text-align: center;
+		&:hover {
+			text-decoration: underline;
+		}
+	}
+	p {
+		text-align: center;
+		line-height: 3.6rem;
+	}
+}
+
+.about-header {
+	@include flex(center, center, row);
+	img {
+		margin: 0 2rem 3rem 0;
+	}
 }
