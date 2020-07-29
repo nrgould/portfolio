@@ -2,6 +2,7 @@
 
 .work-section {
 	@include width(95%);
+	overflow-x: hidden;
 	margin-bottom: 20rem;
 	position: relative;
 	h1 {
@@ -20,6 +21,7 @@
 	min-height: 50vh;
 	margin: 4rem 2rem;
 	padding: 4rem 3rem;
+	border: 1px solid #242424;
 	@include shadow();
 	@include flex(space-around, center, column);
 	h2,
@@ -72,6 +74,7 @@
 .skills-section {
 	@include width(95%);
 	position: relative;
+	overflow-x: hidden;
 	margin-bottom: 20rem;
 	h1 {
 		margin: 0 0 2rem 2rem;
@@ -105,7 +108,7 @@
 		display: grid;
 		justify-items: center;
 		grid-template-columns: repeat(3, 1fr);
-		grid-gap: 2rem;
+		grid-gap: 1.8rem;
 		transition: all 500ms ease;
 	}
 }

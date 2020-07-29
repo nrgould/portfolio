@@ -81,6 +81,8 @@ nav {
   min-height: 5vh;
   background: -webkit-gradient(linear, left top, right top, from(#00a295), to(#5dd98a));
   background: linear-gradient(to right, #00a295, #5dd98a);
+  -webkit-box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.2);
+          box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.2);
 }
 
 #logo {
@@ -246,19 +248,43 @@ body.hide {
 }
 
 .hero-section {
-  width: 95%;
-  margin: auto;
-  min-height: 90vh;
-  margin-bottom: 20rem;
+  min-height: 80vh;
+  margin-bottom: 5rem;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0.3)), to(rgba(0, 0, 0, 0.8))), url("../img/Polygon6.png");
+  background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.3), rgba(0, 0, 0, 0.8)), url("../img/Polygon6.png");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  overflow-x: hidden;
 }
 
 .hero-wrapper {
+  width: 80%;
+  margin: auto;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.hero-title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -266,11 +292,6 @@ body.hide {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-}
-
-.hero-title {
   -webkit-box-flex: 1;
       -ms-flex: 1 1 20rem;
           flex: 1 1 20rem;
@@ -279,8 +300,9 @@ body.hide {
 
 .hero-title h1 {
   font-size: 6rem;
-  text-align: center;
+  text-align: left;
   margin-bottom: 2rem;
+  margin-top: 4rem;
 }
 
 .hero-title h2 {
@@ -342,6 +364,7 @@ footer {
           flex-direction: column;
   background-color: #131d1d;
   padding: 2rem 0;
+  overflow-x: hidden;
   width: 100%;
 }
 
@@ -373,6 +396,7 @@ footer h3 {
 .work-section {
   width: 95%;
   margin: auto;
+  overflow-x: hidden;
   margin-bottom: 20rem;
   position: relative;
 }
@@ -394,6 +418,7 @@ footer h3 {
   min-height: 50vh;
   margin: 4rem 2rem;
   padding: 4rem 3rem;
+  border: 1px solid #242424;
   -webkit-box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.2);
           box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.2);
   display: -webkit-box;
@@ -475,6 +500,7 @@ footer h3 {
   width: 95%;
   margin: auto;
   position: relative;
+  overflow-x: hidden;
   margin-bottom: 20rem;
 }
 
@@ -531,7 +557,7 @@ footer h3 {
   justify-items: center;
   -ms-grid-columns: (1fr)[3];
       grid-template-columns: repeat(3, 1fr);
-  grid-gap: 2rem;
+  grid-gap: 1.8rem;
   -webkit-transition: all 500ms ease;
   transition: all 500ms ease;
 }
@@ -755,6 +781,9 @@ body.light {
   }
   .social-icons-footer {
     width: 50%;
+  }
+  .hero-section {
+    min-height: 60vh;
   }
   .skills-section,
   .work-section,
