@@ -98,8 +98,8 @@ nav {
   background: linear-gradient(to bottom right, #00a295, #5dd98a);
   height: 100%;
   width: 100%;
-  -webkit-clip-path: circle(50px at 100% -10%);
-          clip-path: circle(50px at 100% -10%);
+  -webkit-clip-path: circle(5px at 100% -10%);
+          clip-path: circle(5px at 100% -10%);
 }
 
 .nav-header {
@@ -250,8 +250,6 @@ body.hide {
 .hero-section {
   min-height: 80vh;
   margin-bottom: 5rem;
-  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0.3)), to(rgba(0, 0, 0, 0.8))), url("../img/Polygon6.png");
-  background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.3), rgba(0, 0, 0, 0.8)), url("../img/Polygon6.png");
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;

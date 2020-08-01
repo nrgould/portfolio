@@ -80,19 +80,24 @@ function scrollReveal() {
 			pageTl.fromTo(
 				el,
 				1,
-				{ x: "-100%", opacity: 0, scale: 0.5 },
+				{ x: "-20%", opacity: 0, scale: 0.8 },
 				{ x: "0%", opacity: 1, scale: 1 }
 			);
 		} else if (el.classList.contains("anim-left")) {
-			pageTl.fromTo(el, 1, { x: "100%", opacity: 0 }, { x: "0%", opacity: 1 });
+			pageTl.fromTo(
+				el,
+				1,
+				{ x: "20%", opacity: 0, scale: 0.5 },
+				{ x: "0%", opacity: 1, scale: 1 }
+			);
 		} else if (el.classList.contains("anim-up")) {
-			pageTl.fromTo(el, 1, { y: "100%", opacity: 0 }, { y: "0%", opacity: 1 });
+			pageTl.fromTo(el, 1, { y: "10%", opacity: 0 }, { y: "0%", opacity: 1 });
 		}
 		pageScene = new ScrollMagic.Scene({
 			triggerElement: el,
-			triggerHook: 0.75,
-			duration: "50%",
-			reverse: false,
+			triggerHook: 0.5,
+			// duration: "50%",
+			reverse: true,
 		})
 			.setTween(pageTl)
 			.addTo(controller);
