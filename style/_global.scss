@@ -73,3 +73,17 @@ a {
 	margin-top: 4rem;
 	border-radius: 4px;
 }
+
+.cta-btn {
+	padding: 1.5rem 4rem;
+	background: linear-gradient(to bottom right, $green1, $green2);
+	text-align: center;
+	margin: 2rem 0;
+	color: white;
+	font-weight: 600;
+	font-size: 1.8rem;
+	transition: all 200ms ease;
+}
+
+// $green1: #00a295;
+// $green2: #5dd98a

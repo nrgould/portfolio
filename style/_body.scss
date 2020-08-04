@@ -9,6 +9,7 @@
 
 .work-wrapper {
 	@include flex(space-evenly, space-evenly, row);
+	flex-wrap: wrap;
 	// display: grid;
 	// grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
 	// grid-gap: 5rem;;;;;
@@ -17,12 +18,13 @@
 .work-card {
 	background-color: $dark-card-color;
 	min-height: 50vh;
+	min-width: 90%;
 	margin: 4rem 2rem;
 	padding: 4rem 3rem;
 	border: 1px solid #242424;
 	@include shadow();
 	@include flex(space-around, center, column);
-	flex: 1 1 20rem;
+	flex: 1 1 40rem;
 	h2,
 	h3,
 	p {
@@ -57,7 +59,7 @@
 .bg-text {
 	text-align: center;
 	opacity: 0.7;
-	font-size: 15rem;
+	font-size: 14rem;
 	text-align: center;
 }
 
@@ -130,10 +132,6 @@
 	grid-gap: 2.4rem;
 }
 
-.skills-card:nth-child(0) {
-	flex-basis: 100%;
-}
-
 .flex-break {
 	flex-basis: 100%;
 	width: 0;
@@ -141,6 +139,10 @@
 
 .icons-collection svg path {
 	@include shadow();
+}
+
+.icons-collection svg {
+	transition: all 250ms ease;
 }
 
 .icons-collection:hover svg {
@@ -189,31 +191,114 @@
 	z-index: -1;
 }
 
+//CLIENT LOGOS
+
+.client-logos {
+	background-color: $prim-text-color;
+	margin-top: 20rem;
+	@include flex(center, center, column);
+	h2 {
+		color: $bg-color;
+		text-align: center;
+	}
+}
+
+.logos-wrapper {
+	@include flex(center, center, row);
+	@include width(80%);
+	flex-wrap: wrap;
+}
+
+.logo1,
+.logo2,
+.logo3,
+.logo4,
+.logo5 {
+	flex: 1 1 20rem;
+	margin: 4rem 2rem;
+	// pointer-events: none;
+	max-width: 20rem;
+	transition: all 300ms ease;
+}
+
+.logo4,
+.logo5 {
+	max-height: 10rem;
+}
+
+.logos-wrapper:hover img {
+	transform: scale(0.9);
+	opacity: 0.5;
+	filter: blur(3px);
+}
+.logos-wrapper:hover img:hover {
+	transform: scale(1.2);
+	filter: blur(0px);
+	opacity: 1;
+}
+
 //PHOTOGRAPHY
 
 .photography {
 	@include width(95%);
+	margin-top: 20rem;
 }
 
 .photo-wrapper {
 	text-align: center;
+	margin-top: 20rem;
+	h3,
+	p {
+		margin: 4rem;
+	}
+	position: relative;
+}
+
+.photos-overlay {
+	position: absolute;
+	min-width: 25rem;
+	z-index: 2;
+	background-color: rgba(40, 40, 40, 0.9);
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	// border: 4px solid;
+	// border-image-slice: 1;
+	// border-image-source: linear-gradient(to bottom right, $green1, $green2);
+	@include shadow();
 }
 
 .photo-grid {
-	display: grid;
-	grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-	grid-gap: 4rem;
-	justify-items: space-evenly;
-	align-items: space-evenly;
+	line-height: 0;
+	column-count: 3;
+	column-gap: 0px;
 }
 
-.img1,
-.img2,
-.img3,
-.img4,
-.img5,
-.img6 {
-	width: 100%;
+.photo-grid img {
+	width: 100% !important;
+	height: auto !important;
+	object-fit: cover;
+}
+
+// @media (max-width: 1200px) {
+// 	.photo-grid {
+// 		column-count: 4;
+// 	}
+// }
+// @media (max-width: 1000px) {
+// 	.photo-grid {
+// 		column-count: 3;
+// 	}
+// }
+@media (max-width: 800px) {
+	.photo-grid {
+		column-count: 2;
+	}
+}
+@media (max-width: 400px) {
+	.photo-grid {
+		column-count: 1;
+	}
 }
 
 //CONTACT SECTION
@@ -234,27 +319,16 @@
 
 .contact-card {
 	background-color: $dark-card-color;
-	min-height: 50vh;
-	padding: 3rem;
-	border: 7px solid;
+	min-height: 70vh;
+	max-width: 100%;
+	padding: 2rem;
+	border: 5px solid;
 	border-image-slice: 1;
 	border-image-source: linear-gradient(to bottom right, $green1, $green2);
 	@include shadow();
 	@include flex(space-around, center, column);
 	flex-wrap: wrap;
-	h3 {
-		text-align: center;
-		margin-bottom: 3rem;
-		color: white;
-	}
-	a {
-		font-size: 3rem;
-		color: white;
-		text-align: center;
-		&:hover {
-			text-decoration: underline;
-		}
-	}
+
 	p {
 		text-align: center;
 		line-height: 3.6rem;
@@ -264,6 +338,6 @@
 .about-header {
 	@include flex(center, center, row);
 	img {
-		margin: 0 2rem 3rem 0;
+		margin-right: 2rem;
 	}
 }

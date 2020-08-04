@@ -95,7 +95,7 @@ function scrollReveal() {
 		}
 		pageScene = new ScrollMagic.Scene({
 			triggerElement: el,
-			triggerHook: 0.7,
+			triggerHook: 0.8,
 			// duration: "50%",
 			reverse: true,
 		})

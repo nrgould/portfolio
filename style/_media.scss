@@ -15,10 +15,43 @@
 		margin-bottom: 20rem;
 	}
 	.work-section {
-		@include width(70%);
+		@include width(60%);
 	}
 	.skills-section,
 	.photography {
 		@include width(60%);
+	}
+
+	.hero-wrapper {
+		margin-top: 8rem;
+	}
+
+	.hero-title {
+		@include flex(center, center, column);
+		flex: 1 1 20rem;
+		margin-bottom: 3rem;
+		h1 {
+			font-family: "Raleway", sans-serif;
+			font-size: 6rem;
+			margin-bottom: 2rem;
+			margin-top: 4rem;
+		}
+		h2 {
+			font-size: 7rem;
+			margin-bottom: 2rem;
+		}
+	}
+	.hero-anim-section {
+		flex: 1 1 40rem;
+	}
+
+	.client-logos {
+		min-height: 30vh;
+	}
+	.contact-card {
+		min-height: 50vh;
+		p {
+			padding: 0 4rem 0 4rem;
+		}
 	}
 }

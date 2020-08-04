@@ -38,10 +38,13 @@ body.light {
 .contact-card.light {
 	background-color: white;
 	h3,
-	p,
-	a {
+	p {
 		color: black;
 	}
+}
+
+.contact-card.light h4 {
+	color: black;
 }
 
 .skills-card.light .top-icon .icon-bg {
@@ -56,6 +59,14 @@ body.light {
 }
 .toggle-appearance.light svg path {
 	fill: white;
+}
+
+.photos-overlay.light {
+	background-color: rgba(236, 255, 251, 0.9);
+	h3,
+	p {
+		color: $bg-color;
+	}
 }
 
 .contact-wrapper.light {
