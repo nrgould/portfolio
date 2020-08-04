@@ -98,7 +98,7 @@
 	// grid-template-columns: repeat(auto-fit, minmax(330px, 1fr));
 	// grid-gap: 5rem;
 	// justify-content: center;
-	// align-content: center;;;;
+	// align-content: center;
 }
 
 .skills-card {
@@ -204,9 +204,11 @@
 }
 
 .logos-wrapper {
-	@include flex(center, center, row);
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+	justify-items: center;
+	align-items: center;
 	@include width(80%);
-	flex-wrap: wrap;
 }
 
 .logo1,

@@ -17,6 +17,10 @@
 	.work-section {
 		@include width(60%);
 	}
+
+	.work-card {
+		min-width: 40%;
+	}
 	.skills-section,
 	.photography {
 		@include width(60%);
@@ -54,4 +58,9 @@
 			padding: 0 4rem 0 4rem;
 		}
 	}
+}
+
+@media screen and (min-width: 1000px) {
+}
+@media screen and (min-width: 800px) {
 }

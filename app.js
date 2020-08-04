@@ -97,7 +97,7 @@ function scrollReveal() {
 			triggerElement: el,
 			triggerHook: 0.8,
 			// duration: "50%",
-			reverse: true,
+			reverse: false,
 		})
 			.setTween(pageTl)
 			.addTo(controller);
