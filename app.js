@@ -116,18 +116,15 @@ function navToggle(e) {
 			ease: "power3.inOut",
 			rotate: "45",
 			y: 12,
-			background: "white",
 		});
 		gsap.to(".line2", 0.5, {
 			ease: "power3.inOut",
 			opacity: 0,
-			background: "white",
 		});
 		gsap.to(".line3", 0.5, {
 			ease: "power3.inOut",
 			rotate: "-45",
 			y: -12,
-			background: "white",
 		});
 		gsap.to("#logo", 1, { ease: "power3.inOut", color: "white" });
 		gsap.to(".nav-overlay", 1, {
@@ -142,19 +139,16 @@ function navToggle(e) {
 			ease: "power3.inOut",
 			rotate: "0",
 			y: 0,
-			background: "black",
 		});
 		gsap.to(".line2", 0.5, {
 			ease: "power3.inOut",
 			opacity: 1,
 			x: 0,
-			background: "black",
 		});
 		gsap.to(".line3", 0.5, {
 			ease: "power3.inOut",
 			rotate: "0",
 			y: 0,
-			background: "black",
 		});
 		gsap.to("#logo", 1, { ease: "power3.inOut", color: "black" });
 		gsap.to(".nav-overlay", 1, {

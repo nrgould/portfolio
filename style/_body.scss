@@ -3,7 +3,7 @@
 .work-section {
 	@include width(95%);
 	// overflow-x: hidden;
-	margin-bottom: 20rem;
+	// margin-bottom: 20rem;
 	position: relative;
 }
 
@@ -83,8 +83,9 @@
 .skills-section {
 	@include width(95%);
 	position: relative;
+	margin-top: 20rem;
 	// overflow-x: hidden;
-	margin-bottom: 20rem;
+	// margin-bottom: 20rem;
 }
 
 .skills-wrapper {
@@ -100,7 +101,7 @@
 
 .skills-card {
 	background-color: $dark-card-color;
-	min-height: 50vh;
+	min-height: 55vh;
 	min-width: 30rem;
 	margin: 4rem 2rem;
 	padding: 2rem;
@@ -118,10 +119,15 @@
 	.icons-collection {
 		display: grid;
 		justify-items: center;
-		grid-template-columns: repeat(3, 1fr);
+		grid-template-columns: 1fr 1fr 1fr;
 		grid-gap: 1.8rem;
 		transition: all 500ms ease;
 	}
+}
+
+.icons-collection.icons-design {
+	grid-template-columns: 1fr 1fr;
+	grid-gap: 2.4rem;
 }
 
 .skills-card:nth-child(0) {
@@ -160,6 +166,14 @@
 	}
 }
 
+.skills-list li {
+	list-style-position: inside;
+	list-style-image: url("../svg/iconmonstr-check-mark-1.svg");
+	margin-bottom: 2rem;
+	font-weight: 600;
+	text-align: center;
+}
+
 .icon-bg {
 	background-color: $bg-color;
 	width: 8rem;
@@ -173,6 +187,33 @@
 	top: 75%;
 	left: -10%;
 	z-index: -1;
+}
+
+//PHOTOGRAPHY
+
+.photography {
+	@include width(95%);
+}
+
+.photo-wrapper {
+	text-align: center;
+}
+
+.photo-grid {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+	grid-gap: 4rem;
+	justify-items: space-evenly;
+	align-items: space-evenly;
+}
+
+.img1,
+.img2,
+.img3,
+.img4,
+.img5,
+.img6 {
+	width: 100%;
 }
 
 //CONTACT SECTION

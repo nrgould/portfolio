@@ -88,18 +88,70 @@ body.hide {
 	list-style-position: inside;
 }
 
-.nav-links li:nth-child(1) {
-	list-style-image: url("../svg/metro-wrench.svg");
+.nav-links > ul > li {
+	&:hover {
+		color: white;
+	}
+	&::before {
+		content: "";
+		position: absolute;
+		width: 100%;
+		height: 2px;
+		bottom: 0;
+		left: 0;
+		background-color: #000;
+		visibility: hidden;
+		transform: scaleX(0);
+		transition: all 0.3s ease-in-out 0s;
+	}
+	&:hover::before {
+		visibility: visible;
+		transform: scaleX(1);
+	}
 }
-.nav-links li:nth-child(2) {
-	list-style-image: url("../svg/Icon\ awesome-hammer.svg");
+
+.nav-link-item {
+	@include flex(center, center, row);
+	margin: 2rem;
+	svg {
+		margin-right: 2rem;
+	}
 }
-.nav-links li:nth-child(3) {
-	list-style-image: url("../svg/Icon\ awesome-trophy.svg");
+
+.nav-link-item h2 {
+	&:hover {
+		color: white;
+	}
+	&::before {
+		content: "";
+		position: absolute;
+		width: 100%;
+		height: 2px;
+		bottom: 0;
+		left: 0;
+		background-color: #000;
+		visibility: hidden;
+		transform: scaleX(0);
+		transition: all 0.3s ease-in-out 0s;
+	}
+	&:hover::before {
+		visibility: visible;
+		transform: scaleX(1);
+	}
 }
-.nav-links li:nth-child(4) {
-	list-style-image: url("../svg/Icon\ material-email.svg");
-}
+
+// .nav-links li:nth-child(1) {
+// 	list-style-image: url("../svg/metro-wrench.svg");
+// }
+// .nav-links li:nth-child(2) {
+// 	list-style-image: url("../svg/Icon\ awesome-hammer.svg");
+// }
+// .nav-links li:nth-child(3) {
+// 	list-style-image: url("../svg/Icon\ awesome-trophy.svg");
+// }
+// .nav-links li:nth-child(4) {
+// 	list-style-image: url("../svg/Icon\ material-email.svg");
+// }
 
 .social-icons {
 	padding: 2rem;
@@ -116,7 +168,7 @@ body.hide {
 
 .hero-section {
 	min-height: 95vh;
-	margin-bottom: 5rem;
+	// margin-bottom: 5rem;
 	// background-image: linear-gradient(
 	// 		to bottom,
 	// 		rgba(0, 0, 0, 0.8),
@@ -175,7 +227,8 @@ body.hide {
 
 footer {
 	@include flex(center, center, column);
-	background-color: #131d1d;
+	background: linear-gradient(to bottom right, $green1, $green2);
+	// background-color: #131d1d;
 	padding: 2rem 0;
 	overflow-x: hidden;
 	width: 100%;

@@ -207,20 +207,75 @@ body.hide {
   list-style-position: inside;
 }
 
-.nav-links li:nth-child(1) {
-  list-style-image: url("../svg/metro-wrench.svg");
+.nav-links > ul > li:hover {
+  color: white;
 }
 
-.nav-links li:nth-child(2) {
-  list-style-image: url("../svg/Icon awesome-hammer.svg");
+.nav-links > ul > li::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #000;
+  visibility: hidden;
+  -webkit-transform: scaleX(0);
+          transform: scaleX(0);
+  -webkit-transition: all 0.3s ease-in-out 0s;
+  transition: all 0.3s ease-in-out 0s;
 }
 
-.nav-links li:nth-child(3) {
-  list-style-image: url("../svg/Icon awesome-trophy.svg");
+.nav-links > ul > li:hover::before {
+  visibility: visible;
+  -webkit-transform: scaleX(1);
+          transform: scaleX(1);
 }
 
-.nav-links li:nth-child(4) {
-  list-style-image: url("../svg/Icon material-email.svg");
+.nav-link-item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  margin: 2rem;
+}
+
+.nav-link-item svg {
+  margin-right: 2rem;
+}
+
+.nav-link-item h2:hover {
+  color: white;
+}
+
+.nav-link-item h2::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #000;
+  visibility: hidden;
+  -webkit-transform: scaleX(0);
+          transform: scaleX(0);
+  -webkit-transition: all 0.3s ease-in-out 0s;
+  transition: all 0.3s ease-in-out 0s;
+}
+
+.nav-link-item h2:hover::before {
+  visibility: visible;
+  -webkit-transform: scaleX(1);
+          transform: scaleX(1);
 }
 
 .social-icons {
@@ -248,7 +303,6 @@ body.hide {
 
 .hero-section {
   min-height: 95vh;
-  margin-bottom: 5rem;
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -359,7 +413,8 @@ footer {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  background-color: #131d1d;
+  background: -webkit-gradient(linear, left top, right bottom, from(#00a295), to(#5dd98a));
+  background: linear-gradient(to bottom right, #00a295, #5dd98a);
   padding: 2rem 0;
   overflow-x: hidden;
   width: 100%;
@@ -393,7 +448,6 @@ footer h3 {
 .work-section {
   width: 95%;
   margin: auto;
-  margin-bottom: 20rem;
   position: relative;
 }
 
@@ -529,7 +583,7 @@ footer h3 {
   width: 95%;
   margin: auto;
   position: relative;
-  margin-bottom: 20rem;
+  margin-top: 20rem;
 }
 
 .skills-wrapper {
@@ -555,7 +609,7 @@ footer h3 {
 
 .skills-card {
   background-color: #272b2e;
-  min-height: 50vh;
+  min-height: 55vh;
   min-width: 30rem;
   margin: 4rem 2rem;
   padding: 2rem;
@@ -591,11 +645,17 @@ footer h3 {
   display: -ms-grid;
   display: grid;
   justify-items: center;
-  -ms-grid-columns: (1fr)[3];
-      grid-template-columns: repeat(3, 1fr);
+  -ms-grid-columns: 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr;
   grid-gap: 1.8rem;
   -webkit-transition: all 500ms ease;
   transition: all 500ms ease;
+}
+
+.icons-collection.icons-design {
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+  grid-gap: 2.4rem;
 }
 
 .skills-card:nth-child(0) {
@@ -645,6 +705,14 @@ footer h3 {
   left: 50%;
 }
 
+.skills-list li {
+  list-style-position: inside;
+  list-style-image: url("../svg/iconmonstr-check-mark-1.svg");
+  margin-bottom: 2rem;
+  font-weight: 600;
+  text-align: center;
+}
+
 .icon-bg {
   background-color: #353a3e;
   width: 8rem;
@@ -659,6 +727,36 @@ footer h3 {
   top: 75%;
   left: -10%;
   z-index: -1;
+}
+
+.photography {
+  width: 95%;
+  margin: auto;
+}
+
+.photo-wrapper {
+  text-align: center;
+}
+
+.photo-grid {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (minmax(250px, 1fr))[auto-fit];
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-gap: 4rem;
+  justify-items: space-evenly;
+  -webkit-box-align: space-evenly;
+      -ms-flex-align: space-evenly;
+          align-items: space-evenly;
+}
+
+.img1,
+.img2,
+.img3,
+.img4,
+.img5,
+.img6 {
+  width: 100%;
 }
 
 .contact-section {
@@ -779,7 +877,7 @@ body.light {
 
 .bg-text.light {
   color: #353a3e;
-  opacity: 0.2;
+  opacity: 0.8;
 }
 
 .work-card.light {
@@ -815,6 +913,10 @@ body.light {
   fill: black;
 }
 
+.skills-list.light > ul > li {
+  color: black;
+}
+
 .toggle-appearance.light svg path {
   fill: white;
 }
@@ -842,7 +944,8 @@ body.light {
     width: 70%;
     margin: auto;
   }
-  .skills-section {
+  .skills-section,
+  .photography {
     width: 60%;
     margin: auto;
   }

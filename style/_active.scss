@@ -20,7 +20,7 @@ body.light {
 
 .bg-text.light {
 	color: $bg-color;
-	opacity: 0.2;
+	opacity: 0.8;
 }
 
 .work-card.light {
@@ -51,6 +51,9 @@ body.light {
 	fill: black;
 }
 
+.skills-list.light > ul > li {
+	color: black;
+}
 .toggle-appearance.light svg path {
 	fill: white;
 }

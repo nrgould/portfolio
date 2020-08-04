@@ -17,7 +17,8 @@
 	.work-section {
 		@include width(70%);
 	}
-	.skills-section {
+	.skills-section,
+	.photography {
 		@include width(60%);
 	}
 }
