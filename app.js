@@ -95,7 +95,7 @@ function scrollReveal() {
 		}
 		pageScene = new ScrollMagic.Scene({
 			triggerElement: el,
-			triggerHook: 0.5,
+			triggerHook: 0.7,
 			// duration: "50%",
 			reverse: true,
 		})
@@ -115,21 +115,21 @@ function navToggle(e) {
 		gsap.to(".line1", 0.5, {
 			ease: "power3.inOut",
 			rotate: "45",
-			y: 13,
-			background: "black",
+			y: 12,
+			background: "white",
 		});
 		gsap.to(".line2", 0.5, {
 			ease: "power3.inOut",
 			opacity: 0,
-			background: "black",
+			background: "white",
 		});
 		gsap.to(".line3", 0.5, {
 			ease: "power3.inOut",
 			rotate: "-45",
-			y: -13,
-			background: "black",
+			y: -12,
+			background: "white",
 		});
-		gsap.to("#logo", 1, { ease: "power3.inOut", color: "black" });
+		gsap.to("#logo", 1, { ease: "power3.inOut", color: "white" });
 		gsap.to(".nav-overlay", 1, {
 			ease: "power3.inOut",
 			clipPath: "circle(2500px at 100% -10%)",
@@ -142,21 +142,21 @@ function navToggle(e) {
 			ease: "power3.inOut",
 			rotate: "0",
 			y: 0,
-			background: "white",
+			background: "black",
 		});
 		gsap.to(".line2", 0.5, {
 			ease: "power3.inOut",
 			opacity: 1,
 			x: 0,
-			background: "white",
+			background: "black",
 		});
 		gsap.to(".line3", 0.5, {
 			ease: "power3.inOut",
 			rotate: "0",
 			y: 0,
-			background: "white",
+			background: "black",
 		});
-		gsap.to("#logo", 1, { ease: "power3.inOut", color: "white" });
+		gsap.to("#logo", 1, { ease: "power3.inOut", color: "black" });
 		gsap.to(".nav-overlay", 1, {
 			ease: "power3.inOut",
 			clipPath: "circle(50px at 100% -10%)",

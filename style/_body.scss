@@ -2,18 +2,16 @@
 
 .work-section {
 	@include width(95%);
-	overflow-x: hidden;
+	// overflow-x: hidden;
 	margin-bottom: 20rem;
 	position: relative;
-	h1 {
-		margin: 0 0 2rem 2rem;
-	}
 }
 
 .work-wrapper {
-	display: grid;
-	grid-template-columns: repeat(auto-fill, minmax(420px, 1fr));
-	grid-gap: 5rem;
+	@include flex(space-evenly, space-evenly, row);
+	// display: grid;
+	// grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+	// grid-gap: 5rem;;;;;
 }
 
 .work-card {
@@ -24,6 +22,7 @@
 	border: 1px solid #242424;
 	@include shadow();
 	@include flex(space-around, center, column);
+	flex: 1 1 20rem;
 	h2,
 	h3,
 	p {
@@ -44,7 +43,6 @@
 .work-card-header {
 	@include flex(center, center, row);
 	margin: 0 2rem;
-	// flex-wrap: wrap;
 	img {
 		max-width: 10rem;
 		min-width: 8rem;
@@ -58,7 +56,7 @@
 
 .bg-text {
 	text-align: center;
-	opacity: 0.1;
+	opacity: 0.7;
 	font-size: 15rem;
 	text-align: center;
 }
@@ -67,31 +65,43 @@
 	position: absolute;
 	z-index: -1;
 	top: 40%;
-	right: -50%;
+	left: 0;
+	transform: scale(2);
+	animation: bg-anim 10s infinite;
+}
+
+@keyframes bg-anim {
+	from {
+		transform: rotateZ(0deg);
+	}
+	to {
+		transform: rotateZ(360deg);
+	}
 }
 
 //SKILLS SECTION
 .skills-section {
 	@include width(95%);
 	position: relative;
-	overflow-x: hidden;
+	// overflow-x: hidden;
 	margin-bottom: 20rem;
-	h1 {
-		margin: 0 0 2rem 2rem;
-	}
 }
 
 .skills-wrapper {
 	position: relative;
 	display: grid;
-	grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
-	justify-content: center;
-	align-content: center;
+	@include flex(center, center, row);
+	flex-wrap: wrap;
+	// grid-template-columns: repeat(auto-fit, minmax(330px, 1fr));
+	// grid-gap: 5rem;
+	// justify-content: center;
+	// align-content: center;;;;
 }
 
 .skills-card {
 	background-color: $dark-card-color;
 	min-height: 50vh;
+	min-width: 30rem;
 	margin: 4rem 2rem;
 	padding: 2rem;
 	border: 7px solid;
@@ -99,6 +109,7 @@
 	border-image-source: linear-gradient(to bottom right, $green1, $green2);
 	@include shadow();
 	@include flex(space-around, center, column);
+	flex: 1 1 calc(10% - 1rem);
 	h3 {
 		text-align: center;
 		margin-bottom: 3rem;
@@ -111,6 +122,15 @@
 		grid-gap: 1.8rem;
 		transition: all 500ms ease;
 	}
+}
+
+.skills-card:nth-child(0) {
+	flex-basis: 100%;
+}
+
+.flex-break {
+	flex-basis: 100%;
+	width: 0;
 }
 
 .icons-collection svg path {
@@ -160,6 +180,7 @@
 .contact-section {
 	@include width(95%);
 	margin-bottom: 10rem;
+	margin-top: 20rem;
 }
 
 .contact-wrapper {

@@ -79,14 +79,15 @@ a {
 
 nav {
   min-height: 5vh;
-  background: -webkit-gradient(linear, left top, right top, from(#00a295), to(#5dd98a));
-  background: linear-gradient(to right, #00a295, #5dd98a);
+  background: -webkit-gradient(linear, left top, right bottom, from(#00a295), to(#5dd98a));
+  background: linear-gradient(to bottom right, #00a295, #5dd98a);
   -webkit-box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.2);
           box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.2);
 }
 
 #logo {
-  z-index: 2;
+  z-index: 3;
+  color: black;
 }
 
 .nav-overlay {
@@ -161,16 +162,14 @@ body.hide {
 .burger .line2,
 .burger .line3 {
   height: 0.5rem;
-  width: 4rem;
+  width: 3.6rem;
   background-color: white;
   pointer-events: none;
-  -webkit-box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.2);
-          box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.2);
 }
 
 .burger .line1,
 .burger .line2 {
-  margin-bottom: 0.8rem;
+  margin-bottom: 0.7rem;
 }
 
 .nav-links {
@@ -248,7 +247,7 @@ body.hide {
 }
 
 .hero-section {
-  min-height: 80vh;
+  min-height: 95vh;
   margin-bottom: 5rem;
   background-position: center;
   background-size: cover;
@@ -394,21 +393,24 @@ footer h3 {
 .work-section {
   width: 95%;
   margin: auto;
-  overflow-x: hidden;
   margin-bottom: 20rem;
   position: relative;
 }
 
-.work-section h1 {
-  margin: 0 0 2rem 2rem;
-}
-
 .work-wrapper {
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: (minmax(420px, 1fr))[auto-fill];
-      grid-template-columns: repeat(auto-fill, minmax(420px, 1fr));
-  grid-gap: 5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: space-evenly;
+      -ms-flex-align: space-evenly;
+          align-items: space-evenly;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
 }
 
 .work-card {
@@ -431,6 +433,9 @@ footer h3 {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 20rem;
+          flex: 1 1 20rem;
 }
 
 .work-card h2,
@@ -482,7 +487,7 @@ footer h3 {
 
 .bg-text {
   text-align: center;
-  opacity: 0.1;
+  opacity: 0.7;
   font-size: 15rem;
   text-align: center;
 }
@@ -491,37 +496,67 @@ footer h3 {
   position: absolute;
   z-index: -1;
   top: 40%;
-  right: -50%;
+  left: 0;
+  -webkit-transform: scale(2);
+          transform: scale(2);
+  -webkit-animation: bg-anim 10s infinite;
+          animation: bg-anim 10s infinite;
+}
+
+@-webkit-keyframes bg-anim {
+  from {
+    -webkit-transform: rotateZ(0deg);
+            transform: rotateZ(0deg);
+  }
+  to {
+    -webkit-transform: rotateZ(360deg);
+            transform: rotateZ(360deg);
+  }
+}
+
+@keyframes bg-anim {
+  from {
+    -webkit-transform: rotateZ(0deg);
+            transform: rotateZ(0deg);
+  }
+  to {
+    -webkit-transform: rotateZ(360deg);
+            transform: rotateZ(360deg);
+  }
 }
 
 .skills-section {
   width: 95%;
   margin: auto;
   position: relative;
-  overflow-x: hidden;
   margin-bottom: 20rem;
-}
-
-.skills-section h1 {
-  margin: 0 0 2rem 2rem;
 }
 
 .skills-wrapper {
   position: relative;
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: (minmax(350px, 1fr))[auto-fill];
-      grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  -ms-flex-line-pack: center;
-      align-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 
 .skills-card {
   background-color: #272b2e;
   min-height: 50vh;
+  min-width: 30rem;
   margin: 4rem 2rem;
   padding: 2rem;
   border: 7px solid;
@@ -541,6 +576,9 @@ footer h3 {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 calc(10% - 1rem);
+          flex: 1 1 calc(10% - 1rem);
 }
 
 .skills-card h3 {
@@ -558,6 +596,17 @@ footer h3 {
   grid-gap: 1.8rem;
   -webkit-transition: all 500ms ease;
   transition: all 500ms ease;
+}
+
+.skills-card:nth-child(0) {
+  -ms-flex-preferred-size: 100%;
+      flex-basis: 100%;
+}
+
+.flex-break {
+  -ms-flex-preferred-size: 100%;
+      flex-basis: 100%;
+  width: 0;
 }
 
 .icons-collection svg path {
@@ -616,6 +665,7 @@ footer h3 {
   width: 95%;
   margin: auto;
   margin-bottom: 10rem;
+  margin-top: 20rem;
 }
 
 .contact-wrapper {
@@ -706,7 +756,7 @@ footer h3 {
 }
 
 body.light {
-  background-color: #ecfffb;
+  background-color: white;
 }
 
 .nav-links.light ul li a {
@@ -773,7 +823,7 @@ body.light {
   color: #353a3e;
 }
 
-@media screen and (min-width: 1000px) {
+@media screen and (min-width: 1200px) {
   .contact-card {
     max-width: 50%;
   }
@@ -788,8 +838,11 @@ body.light {
   .contact-section {
     margin-bottom: 20rem;
   }
-  .skills-section,
   .work-section {
+    width: 70%;
+    margin: auto;
+  }
+  .skills-section {
     width: 60%;
     margin: auto;
   }

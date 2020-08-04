@@ -1,4 +1,4 @@
-@media screen and (min-width: 1000px) {
+@media screen and (min-width: 1200px) {
 	.contact-card {
 		max-width: 50%;
 	}
@@ -14,8 +14,10 @@
 		// height: 100vh;
 		margin-bottom: 20rem;
 	}
-	.skills-section,
 	.work-section {
+		@include width(70%);
+	}
+	.skills-section {
 		@include width(60%);
 	}
 }

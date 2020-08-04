@@ -2,12 +2,14 @@
 
 nav {
 	min-height: 5vh;
-	background: linear-gradient(to right, $green1, $green2);
+	background: linear-gradient(to bottom right, $green1, $green2);
 	@include shadow();
+	// background-color: $prim-text-color;
 }
 
 #logo {
-	z-index: 2;
+	z-index: 3;
+	color: black;
 }
 
 .nav-overlay {
@@ -54,15 +56,14 @@ body.hide {
 	.line2,
 	.line3 {
 		height: 0.5rem;
-		width: 4rem;
+		width: 3.6rem;
 		background-color: white;
-		// margin-bottom: 0.8rem;
 		pointer-events: none;
-		@include shadow();
+		// @include shadow();
 	}
 	.line1,
 	.line2 {
-		margin-bottom: 0.8rem;
+		margin-bottom: 0.7rem;
 	}
 }
 
@@ -114,7 +115,7 @@ body.hide {
 //HERO SECTION
 
 .hero-section {
-	min-height: 80vh;
+	min-height: 95vh;
 	margin-bottom: 5rem;
 	// background-image: linear-gradient(
 	// 		to bottom,
