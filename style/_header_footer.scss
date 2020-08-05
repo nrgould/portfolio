@@ -4,7 +4,6 @@ nav {
 	min-height: 5vh;
 	background: linear-gradient(to bottom right, $green1, $green2);
 	@include shadow();
-	// background-color: $prim-text-color;
 }
 
 #logo {
@@ -20,7 +19,8 @@ nav {
 	background: linear-gradient(to bottom right, $green1, $green2);
 	height: 100%;
 	width: 100%;
-	clip-path: circle(50px at 100% -10%);
+	transform: translateX(100%);
+	// clip-path: circle(50px at 100% -10%);
 	// display: none;
 }
 
@@ -84,10 +84,6 @@ body.hide {
 	}
 }
 
-.nav-links li {
-	list-style-position: inside;
-}
-
 .nav-links > ul > li {
 	&:hover {
 		color: white;
@@ -119,25 +115,8 @@ body.hide {
 }
 
 .nav-link-item h2 {
-	&:hover {
-		color: white;
-	}
-	&::before {
-		content: "";
-		position: absolute;
-		width: 100%;
-		height: 2px;
-		bottom: 0;
-		left: 0;
-		background-color: #000;
-		visibility: hidden;
-		transform: scaleX(0);
-		transition: all 0.3s ease-in-out 0s;
-	}
-	&:hover::before {
-		visibility: visible;
-		transform: scaleX(1);
-	}
+	color: white;
+	text-shadow: 0px 3px 6px rgba($color: #000000, $alpha: 0.2);
 }
 
 // .nav-links li:nth-child(1) {
@@ -220,8 +199,8 @@ body.hide {
 
 footer {
 	@include flex(center, center, column);
-	background: linear-gradient(to bottom right, $green1, $green2);
-	// background-color: #131d1d;
+	// background: linear-gradient(to bottom right, $green1, $green2);
+	// background-color: #00201d;
 	padding: 2rem 0;
 	overflow-x: hidden;
 	width: 100%;

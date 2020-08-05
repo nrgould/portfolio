@@ -42,7 +42,7 @@ function boxAnim() {
 		motionPath: {
 			path: boxPath,
 			align: boxPath,
-			autoRotate: true,
+			autoRotate: false,
 			alignOrigin: [0.5, 0.5],
 		},
 	});
@@ -97,7 +97,7 @@ function scrollReveal() {
 			triggerElement: el,
 			triggerHook: 0.8,
 			// duration: "50%",
-			reverse: false,
+			reverse: true,
 		})
 			.setTween(pageTl)
 			.addTo(controller);
@@ -127,10 +127,24 @@ function navToggle(e) {
 			y: -12,
 		});
 		gsap.to("#logo", 1, { ease: "power3.inOut", color: "white" });
-		gsap.to(".nav-overlay", 1, {
-			ease: "power3.inOut",
-			clipPath: "circle(2500px at 100% -10%)",
-		});
+		gsap.fromTo(
+			".nav-overlay",
+			0.75,
+			{
+				opacity: 0,
+				ease: "power3.inOut",
+				x: "100%",
+			},
+			{
+				opacity: 1,
+				ease: "power3.inOut",
+				x: "0%",
+			}
+		);
+		// gsap.to(".nav-overlay", 1, {
+		// 	ease: "power3.inOut",
+		// 	clipPath: "circle(2500px at 100% -10%)",
+		// });
 		document.body.classList.add("hide");
 		// document.querySelector(".line2").classList.add("hide");
 	} else {
@@ -151,10 +165,24 @@ function navToggle(e) {
 			y: 0,
 		});
 		gsap.to("#logo", 1, { ease: "power3.inOut", color: "black" });
-		gsap.to(".nav-overlay", 1, {
-			ease: "power3.inOut",
-			clipPath: "circle(50px at 100% -10%)",
-		});
+		gsap.fromTo(
+			".nav-overlay",
+			0.75,
+			{
+				opacity: 1,
+				ease: "power3.inOut",
+				x: "0%",
+			},
+			{
+				opacity: 0,
+				ease: "power3.inOut",
+				x: "100%",
+			}
+		);
+		// gsap.to(".nav-overlay", 1, {
+		// 	ease: "power3.inOut",
+		// 	clipPath: "circle(50px at 100% -10%)",
+		// });
 		document.body.classList.remove("hide");
 		// document.querySelector(".line2").classList.remove("hide");
 	}
@@ -165,7 +193,8 @@ navLinks.addEventListener("click", () => {
 	gsap.to(".line2", 0.5, { opacity: 1, x: 0, background: "white" });
 	gsap.to(".line3", 0.5, { rotate: "0", y: 0, background: "white" });
 	gsap.to("#logo", 1, { color: "white" });
-	gsap.to(".nav-overlay", 1, { clipPath: "circle(50px at 100% -10%)" });
+	gsap.to(".nav-overlay", 1, { x: "100%" });
+	// gsap.to(".nav-overlay", 1, { clipPath: "circle(50px at 100% -10%)" });
 	document.body.classList.remove("hide");
 });
 
@@ -183,6 +212,10 @@ navLinks.addEventListener("click", () => {
 // }
 
 //DARK MODE
+
+const skillsListItem = document.querySelectorAll(".skills-list li");
+const skillsList = document.querySelectorAll(".skills-list");
+const skillIcon2 = document.querySelectorAll(".skill-icon");
 
 //select all items elligible to toggle from dark to light
 //check if classlist contains 'light'
@@ -209,6 +242,16 @@ function darkModeToggle() {
 	darkItem.forEach((item) => {
 		item.classList.toggle("light");
 	});
+	// console.log(skillIcon2.classList.contains("light"));
+	// skillIcon2.forEach((item) => {
+	// 	if (item.classList.contains("light")) {
+	// 		item.innerHTML = `<img
+	// 							class="dark-item skill-icon"
+	// 							src="./svg/Icon awesome-js-dark.svg"
+	// 							alt=""
+	// 						/>`;
+	// 	}
+	// });
 }
 
 boxAnim();

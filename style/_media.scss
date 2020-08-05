@@ -1,29 +1,8 @@
 @media screen and (min-width: 1200px) {
-	.contact-card {
-		max-width: 50%;
-	}
-	.social-icons-footer {
-		width: 50%;
-	}
+	//NAV/HERO
+
 	.hero-section {
 		min-height: 60vh;
-	}
-	.skills-section,
-	.work-section,
-	.contact-section {
-		// height: 100vh;
-		margin-bottom: 20rem;
-	}
-	.work-section {
-		@include width(60%);
-	}
-
-	.work-card {
-		min-width: 40%;
-	}
-	.skills-section,
-	.photography {
-		@include width(60%);
 	}
 
 	.hero-wrapper {
@@ -45,22 +24,65 @@
 			margin-bottom: 2rem;
 		}
 	}
+
 	.hero-anim-section {
 		flex: 1 1 40rem;
 	}
 
+	//MULTI SECTION
+
+	.skills-section,
+	.work-section,
+	.contact-section {
+		// height: 100vh;
+		margin-bottom: 20rem;
+	}
+
+	.skills-section,
+	.photography {
+		@include width(60%);
+	}
+
+	//work section
+	.work-section {
+		@include width(60%);
+	}
+
+	.work-card {
+		min-width: 40%;
+		max-width: 40%;
+	}
+
+	//CLIENT LOGOS
+
 	.client-logos {
 		min-height: 30vh;
 	}
+
+	//CONTACT SECTION
 	.contact-card {
+		max-width: 50%;
 		min-height: 50vh;
 		p {
 			padding: 0 4rem 0 4rem;
 		}
 	}
+	//FOOTER
+	.social-icons-footer {
+		width: 50%;
+	}
 }
 
 @media screen and (min-width: 1000px) {
+	.work-section {
+		@include width(95%);
+	}
+	.work-card {
+		min-width: 30%;
+	}
 }
 @media screen and (min-width: 800px) {
+	.work-card {
+		min-width: 25%;
+	}
 }

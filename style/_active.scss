@@ -39,23 +39,24 @@ body.light {
 	background-color: white;
 	h3,
 	p {
-		color: black;
+		color: $bg-color;
 	}
 }
 
 .contact-card.light h4 {
-	color: black;
+	color: $bg-color;
 }
 
 .skills-card.light .top-icon .icon-bg {
-	background-color: black;
+	background-color: $bg-color;
 }
 .icons-collection.light svg path {
-	fill: black;
+	fill: $bg-color;
 }
 
 .skills-list.light > ul > li {
-	color: black;
+	color: $bg-color;
+	list-style-image: url("../svg/check-dark.svg");
 }
 .toggle-appearance.light svg path {
 	fill: white;
@@ -73,4 +74,8 @@ body.light {
 	h1 {
 		color: $bg-color;
 	}
+}
+
+footer.light {
+	background-color: $bg-color;
 }

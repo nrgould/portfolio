@@ -10,9 +10,6 @@
 .work-wrapper {
 	@include flex(space-evenly, space-evenly, row);
 	flex-wrap: wrap;
-	// display: grid;
-	// grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-	// grid-gap: 5rem;;;;;
 }
 
 .work-card {
@@ -49,6 +46,7 @@
 		max-width: 10rem;
 		min-width: 8rem;
 		margin-bottom: 2rem;
+		margin-right: 2rem;
 	}
 	h2 {
 		margin-bottom: 3rem;
@@ -121,6 +119,7 @@
 	.icons-collection {
 		display: grid;
 		justify-items: center;
+		align-items: center;
 		grid-template-columns: 1fr 1fr 1fr;
 		grid-gap: 1.8rem;
 		transition: all 500ms ease;
@@ -143,6 +142,13 @@
 
 .icons-collection svg {
 	transition: all 250ms ease;
+	width: 100%;
+	overflow: visible;
+}
+
+#test-svg {
+	// width: 100%;
+	overflow: visible;
 }
 
 .icons-collection:hover svg {
@@ -170,10 +176,11 @@
 
 .skills-list li {
 	list-style-position: inside;
-	list-style-image: url("../svg/iconmonstr-check-mark-1.svg");
+	list-style-image: url("../svg/check-white.svg");
 	margin-bottom: 2rem;
 	font-weight: 600;
 	text-align: center;
+	color: white;
 }
 
 .icon-bg {
@@ -194,7 +201,8 @@
 //CLIENT LOGOS
 
 .client-logos {
-	background-color: $prim-text-color;
+	// background-color: $prim-text-color;
+	background-color: #adffcb;
 	margin-top: 20rem;
 	@include flex(center, center, column);
 	h2 {
@@ -220,7 +228,7 @@
 	margin: 4rem 2rem;
 	// pointer-events: none;
 	max-width: 20rem;
-	transition: all 300ms ease;
+	transition: all 320ms ease;
 }
 
 .logo4,
@@ -234,7 +242,7 @@
 	filter: blur(3px);
 }
 .logos-wrapper:hover img:hover {
-	transform: scale(1.2);
+	transform: scale(1.1);
 	filter: blur(0px);
 	opacity: 1;
 }
@@ -273,7 +281,7 @@
 .photo-grid {
 	line-height: 0;
 	column-count: 3;
-	column-gap: 0px;
+	column-gap: 0px !important;
 }
 
 .photo-grid img {
@@ -321,8 +329,9 @@
 
 .contact-card {
 	background-color: $dark-card-color;
-	min-height: 70vh;
+	min-height: 50vh;
 	max-width: 100%;
+	margin-top: 5rem;
 	padding: 2rem;
 	border: 5px solid;
 	border-image-slice: 1;
