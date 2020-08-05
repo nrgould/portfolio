@@ -30,6 +30,8 @@ const skillIcon = document.querySelectorAll(".icons-collection svg");
 
 darkBtn.addEventListener("click", darkModeToggle);
 burger.addEventListener("click", navToggle);
+navLinks.addEventListener("click", closeNav);
+
 //BOX ANIMATION
 function boxAnim() {
 	let box1Tl = new gsap.timeline();
@@ -112,6 +114,7 @@ function navToggle(e) {
 	if (!e.target.classList.contains("active")) {
 		e.target.classList.add("active");
 		navOverlay.style.display = "initial";
+		//burger => x
 		gsap.to(".line1", 0.5, {
 			ease: "power3.inOut",
 			rotate: "45",
@@ -126,9 +129,11 @@ function navToggle(e) {
 			rotate: "-45",
 			y: -12,
 		});
+		//logo anim
 		gsap.to("#logo", 1, { ease: "power3.inOut", color: "white" });
+		//nav overlay open
 		gsap.fromTo(
-			".nav-overlay",
+			navOverlay,
 			0.75,
 			{
 				opacity: 0,
@@ -149,6 +154,7 @@ function navToggle(e) {
 		// document.querySelector(".line2").classList.add("hide");
 	} else {
 		e.target.classList.remove("active");
+		//x => burger
 		gsap.to(".line1", 0.5, {
 			ease: "power3.inOut",
 			rotate: "0",
@@ -165,8 +171,9 @@ function navToggle(e) {
 			y: 0,
 		});
 		gsap.to("#logo", 1, { ease: "power3.inOut", color: "black" });
+		//nav overlay close
 		gsap.fromTo(
-			".nav-overlay",
+			navOverlay,
 			0.75,
 			{
 				opacity: 1,
@@ -188,28 +195,29 @@ function navToggle(e) {
 	}
 }
 
-navLinks.addEventListener("click", () => {
+function closeNav() {
+	burger.classList.remove("active");
 	gsap.to(".line1", 0.5, { rotate: "0", y: 0, background: "white" });
 	gsap.to(".line2", 0.5, { opacity: 1, x: 0, background: "white" });
 	gsap.to(".line3", 0.5, { rotate: "0", y: 0, background: "white" });
 	gsap.to("#logo", 1, { color: "white" });
-	gsap.to(".nav-overlay", 1, { x: "100%" });
+	gsap.fromTo(
+		navOverlay,
+		0.75,
+		{
+			opacity: 1,
+			ease: "power3.inOut",
+			x: "0%",
+		},
+		{
+			opacity: 0,
+			ease: "power3.inOut",
+			x: "100%",
+		}
+	);
 	// gsap.to(".nav-overlay", 1, { clipPath: "circle(50px at 100% -10%)" });
 	document.body.classList.remove("hide");
-});
-
-//READ MORE
-
-//on click, create element p
-//need to know which card we're activating
-// append to skills card
-//if statement to see if active
-//if active, click removes element
-//bonus: animating arrow icon
-
-// function readMore(idx) {
-// 	console.log(idx);
-// }
+}
 
 //DARK MODE
 

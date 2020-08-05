@@ -285,14 +285,14 @@
 
 .testimonial-wrapper {
 	text-align: center;
-	opacity: 0.75;
+	// opacity: 0.75;
 	@include flex(center, center, column);
 	h2,
 	h4 {
 		margin-bottom: 3rem;
 	}
 	h2 {
-		font-size: 3rem;
+		font-size: 3.6rem;
 		line-height: 6rem;
 	}
 	h4 {
@@ -302,7 +302,7 @@
 	}
 }
 
-.testimonial-wrapper h2 span:nth-child(1) {
+.testimonial-wrapper > h2 > span:nth-child(n) {
 	color: $green1;
 }
 .testimonial-wrapper h2 span:nth-child(2) {

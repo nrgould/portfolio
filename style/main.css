@@ -841,7 +841,6 @@ footer h3 {
 
 .testimonial-wrapper {
   text-align: center;
-  opacity: 0.75;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -863,7 +862,7 @@ footer h3 {
 }
 
 .testimonial-wrapper h2 {
-  font-size: 3rem;
+  font-size: 3.6rem;
   line-height: 6rem;
 }
 
@@ -873,7 +872,7 @@ footer h3 {
   font-weight: 600;
 }
 
-.testimonial-wrapper h2 span:nth-child(1) {
+.testimonial-wrapper > h2 > span:nth-child(n) {
   color: #00a295;
 }
 
@@ -1142,7 +1141,8 @@ body.light {
   background-color: rgba(72, 146, 139, 0.75);
 }
 
-.contact-wrapper.light h1 {
+.contact-wrapper.light h1,
+.contact-wrapper.light h2 {
   color: #131919;
 }
 
