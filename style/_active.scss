@@ -2,10 +2,6 @@ body.light {
 	background-color: white;
 }
 
-.nav-links.light ul li a {
-	color: black;
-}
-
 .hero-title.light {
 	transition: all 1s ease-in-out;
 	h1,
@@ -62,12 +58,25 @@ body.light {
 	fill: white;
 }
 
-.photos-overlay.light {
-	background-color: rgba(236, 255, 251, 0.9);
-	h3,
-	p {
+.testimonial-wrapper.light {
+	h2,
+	h4 {
 		color: $bg-color;
 	}
+}
+
+.client-logos.light > h2 {
+	color: $bg-color;
+	opacity: 0.5;
+}
+
+.photos-overlay.light {
+	background-color: rgba(72, 146, 139, 0.75);
+	// background-color: rgba(236, 255, 251, 0.9);
+	// h3,
+	// p {
+	// 	color: $bg-color;
+	// }
 }
 
 .contact-wrapper.light {

@@ -126,6 +126,13 @@
 	}
 }
 
+.skills-card:nth-child(6) {
+	max-width: 40rem;
+}
+.skills-card:nth-child(4) {
+	flex: 2;
+}
+
 .icons-collection.icons-design {
 	grid-template-columns: 1fr 1fr;
 	grid-gap: 2.4rem;
@@ -201,14 +208,36 @@
 //CLIENT LOGOS
 
 .client-logos {
-	// background-color: $prim-text-color;
-	background-color: #adffcb;
+	background-color: $prim-text-color;
 	margin-top: 20rem;
+	position: relative;
 	@include flex(center, center, column);
 	h2 {
 		color: $bg-color;
 		text-align: center;
 	}
+	&::before {
+		content: "";
+		width: 100%;
+		height: 0.5rem;
+		background: linear-gradient(to right, $green1, $green2);
+		// background-color: $green1;
+		opacity: 0.75;
+	}
+	&::after {
+		content: "";
+		width: 100%;
+		height: 0.5rem;
+		background: linear-gradient(to right, $green1, $green2);
+		opacity: 0.75;
+	}
+}
+
+.client-logos h2 {
+	position: absolute;
+	color: $prim-text-color;
+	top: -15%;
+	opacity: 0.75;
 }
 
 .logos-wrapper {
@@ -245,6 +274,39 @@
 	transform: scale(1.1);
 	filter: blur(0px);
 	opacity: 1;
+}
+
+//TESTIMONIALS SECTION
+
+.testimonial-section {
+	@include width(90%);
+	margin-top: 20rem;
+}
+
+.testimonial-wrapper {
+	text-align: center;
+	opacity: 0.75;
+	@include flex(center, center, column);
+	h2,
+	h4 {
+		margin-bottom: 3rem;
+	}
+	h2 {
+		font-size: 3rem;
+		line-height: 6rem;
+	}
+	h4 {
+		line-height: 4rem;
+		font-size: 2rem;
+		font-weight: 600;
+	}
+}
+
+.testimonial-wrapper h2 span:nth-child(1) {
+	color: $green1;
+}
+.testimonial-wrapper h2 span:nth-child(2) {
+	color: $green2;
 }
 
 //PHOTOGRAPHY
@@ -315,7 +377,7 @@
 
 .contact-section {
 	@include width(95%);
-	margin-bottom: 10rem;
+	margin-bottom: 5rem;
 	margin-top: 20rem;
 }
 
@@ -339,11 +401,21 @@
 	@include shadow();
 	@include flex(space-around, center, column);
 	flex-wrap: wrap;
-
+	transition: all 200ms ease;
 	p {
 		text-align: center;
 		line-height: 3.6rem;
 	}
+	@include expand();
+	// &:hover {
+	// 	h4,
+	// 	img {
+	// 		transform: translateY(-10%);
+	// 	}
+	// 	p {
+	// 		transform: translateY(10%);
+	// 	}
+	// };
 }
 
 .about-header {

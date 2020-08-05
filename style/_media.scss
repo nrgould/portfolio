@@ -32,31 +32,64 @@
 	//MULTI SECTION
 
 	.skills-section,
-	.work-section,
-	.contact-section {
+	.work-section {
 		// height: 100vh;
 		margin-bottom: 20rem;
 	}
 
-	.skills-section,
-	.photography {
+	.skills-section {
 		@include width(60%);
+		margin-top: 20rem;
 	}
 
-	//work section
+	//WORK SECTION
 	.work-section {
 		@include width(60%);
 	}
 
 	.work-card {
-		min-width: 40%;
-		max-width: 40%;
+		max-width: 35%;
 	}
 
 	//CLIENT LOGOS
 
 	.client-logos {
 		min-height: 30vh;
+	}
+
+	.client-logos h2 {
+		top: -20%;
+	}
+
+	//SKILLS SECTION
+	.skills-card:nth-child(4) {
+		flex: 1;
+	}
+
+	.skills-card {
+		max-width: 40rem;
+	}
+
+	//TESTIMONIAL
+
+	.testimonial-section {
+		@include width(60%);
+		margin-top: 20rem;
+	}
+
+	.testimonial-wrapper {
+		h2 {
+			font-size: 4.4rem;
+		}
+		h4 {
+			font-size: 2.6rem;
+		}
+	}
+
+	//PHOTOGRAPHY
+	.photography {
+		@include width(75%);
+		margin-top: 20rem;
 	}
 
 	//CONTACT SECTION
@@ -66,6 +99,10 @@
 		p {
 			padding: 0 4rem 0 4rem;
 		}
+	}
+
+	.contact-section {
+		margin-bottom: 5rem;
 	}
 	//FOOTER
 	.social-icons-footer {
