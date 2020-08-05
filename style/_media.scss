@@ -37,11 +37,6 @@
 		margin-bottom: 20rem;
 	}
 
-	.skills-section {
-		@include width(60%);
-		margin-top: 20rem;
-	}
-
 	//WORK SECTION
 	.work-section {
 		@include width(60%);
@@ -62,6 +57,11 @@
 	}
 
 	//SKILLS SECTION
+
+	.skills-section {
+		@include width(60%);
+		margin-top: 20rem;
+	}
 	.skills-card:nth-child(4) {
 		flex: 1;
 	}
@@ -94,11 +94,7 @@
 
 	//CONTACT SECTION
 	.contact-card {
-		max-width: 50%;
-		min-height: 50vh;
-		p {
-			padding: 0 4rem 0 4rem;
-		}
+		max-width: 75%;
 	}
 
 	.contact-section {
