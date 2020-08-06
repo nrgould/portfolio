@@ -97,8 +97,12 @@ nav {
 }
 
 #logo {
-  z-index: 3;
-  color: white;
+  z-index: 2;
+}
+
+#logo svg {
+  height: 5rem;
+  width: 100%;
 }
 
 .nav-overlay {
@@ -190,53 +194,6 @@ body.hide {
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
   font-size: 4rem;
-}
-
-.nav-links ul {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-}
-
-.nav-links li a {
-  color: white;
-  font-size: 4rem;
-  line-height: 5rem;
-  font-weight: 700;
-}
-
-.nav-links > ul > li:hover {
-  color: white;
-}
-
-.nav-links > ul > li::before {
-  content: "";
-  position: absolute;
-  width: 100%;
-  height: 2px;
-  bottom: 0;
-  left: 0;
-  background-color: #000;
-  visibility: hidden;
-  -webkit-transform: scaleX(0);
-          transform: scaleX(0);
-  -webkit-transition: all 0.3s ease-in-out 0s;
-  transition: all 0.3s ease-in-out 0s;
-}
-
-.nav-links > ul > li:hover::before {
-  visibility: visible;
-  -webkit-transform: scaleX(1);
-          transform: scaleX(1);
 }
 
 .nav-link-item {
@@ -428,9 +385,31 @@ footer h3 {
           flex-direction: row;
 }
 
+.cta-footer {
+  margin-bottom: 3rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+.cta-footer h1 {
+  margin-right: 4rem;
+}
+
 .work-section {
   width: 95%;
   margin: auto;
+  margin-top: 20rem;
   position: relative;
 }
 
@@ -511,7 +490,7 @@ footer h3 {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-  margin: 0 2rem;
+  margin: 0 3rem;
 }
 
 .work-card-header img {
@@ -760,16 +739,7 @@ footer h3 {
   text-align: center;
 }
 
-.client-logos::before {
-  content: "";
-  width: 100%;
-  height: 0.5rem;
-  background: -webkit-gradient(linear, left top, right top, from(#00a295), to(#5dd98a));
-  background: linear-gradient(to right, #00a295, #5dd98a);
-  opacity: 0.75;
-}
-
-.client-logos::after {
+.client-logos::before, .client-logos::after {
   content: "";
   width: 100%;
   height: 0.5rem;
@@ -901,13 +871,17 @@ footer h3 {
   position: absolute;
   min-width: 25rem;
   z-index: 2;
-  background-color: rgba(40, 40, 40, 0.9);
+  background-color: rgba(72, 146, 139, 0.75);
   top: 50%;
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
   -webkit-box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.2);
           box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.2);
+}
+
+.photos-overlay p {
+  font-weight: 600;
 }
 
 .photo-grid {
@@ -939,14 +913,14 @@ footer h3 {
   }
 }
 
-.contact-section {
+.about-section {
   width: 95%;
   margin: auto;
   margin-bottom: 5rem;
   margin-top: 20rem;
 }
 
-.contact-wrapper {
+.about-wrapper {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -962,15 +936,15 @@ footer h3 {
           flex-direction: column;
 }
 
-.contact-wrapper h1 {
+.about-wrapper h1 {
   text-align: center;
   margin-bottom: 4rem;
 }
 
-.contact-card {
+.about-card {
   background-color: #272b2e;
   margin-top: 5rem;
-  border: 5px solid;
+  border: 7px solid;
   border-image-slice: 1;
   border-image-source: linear-gradient(to bottom right, #00a295, #5dd98a);
   -ms-flex-wrap: wrap;
@@ -983,12 +957,12 @@ footer h3 {
   transition: all 200ms ease;
 }
 
-.contact-card p {
+.about-card p {
   text-align: center;
   line-height: 3.6rem;
 }
 
-.contact-card:hover {
+.about-card:hover {
   -webkit-transform: scale(1.05);
           transform: scale(1.05);
 }
@@ -1033,6 +1007,7 @@ footer h3 {
       -ms-flex: 2 1 35rem;
           flex: 2 1 35rem;
   margin: 0 2rem 0 2rem;
+  padding: 4rem;
 }
 
 .about-text h2,
@@ -1045,7 +1020,7 @@ footer h3 {
 }
 
 .about-text p {
-  line-height: 3.4rem;
+  line-height: 4rem;
 }
 
 .about-image {
@@ -1196,11 +1171,13 @@ footer.light {
     margin-bottom: 20rem;
   }
   .work-section {
-    width: 60%;
+    width: 50%;
     margin: auto;
+    margin-top: 20rem;
   }
   .work-card {
     max-width: 35%;
+    padding: 6rem;
   }
   .client-logos {
     min-height: 30vh;
@@ -1237,10 +1214,10 @@ footer.light {
     margin: auto;
     margin-top: 20rem;
   }
-  .contact-card {
+  .about-card {
     max-width: 75%;
   }
-  .contact-section {
+  .about-section {
     margin-bottom: 5rem;
   }
   .social-icons-footer {

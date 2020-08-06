@@ -39,11 +39,13 @@
 
 	//WORK SECTION
 	.work-section {
-		@include width(60%);
+		@include width(50%);
+		margin-top: 20rem;
 	}
 
 	.work-card {
 		max-width: 35%;
+		padding: 6rem;
 	}
 
 	//CLIENT LOGOS
@@ -92,12 +94,12 @@
 		margin-top: 20rem;
 	}
 
-	//CONTACT SECTION
-	.contact-card {
+	//about SECTION
+	.about-card {
 		max-width: 75%;
 	}
 
-	.contact-section {
+	.about-section {
 		margin-bottom: 5rem;
 	}
 	//FOOTER

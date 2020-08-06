@@ -89,7 +89,7 @@ function scrollReveal() {
 			pageTl.fromTo(
 				el,
 				1,
-				{ x: "20%", opacity: 0, scale: 0.5 },
+				{ x: "20%", opacity: 0, scale: 0.8 },
 				{ x: "0%", opacity: 1, scale: 1 }
 			);
 		} else if (el.classList.contains("anim-up")) {
