@@ -8,6 +8,7 @@ nav {
 
 #logo {
 	z-index: 2;
+	transform: scale(0.55);
 	svg {
 		height: 5rem;
 		width: 100%;
@@ -44,6 +45,20 @@ body.hide {
 .appearance-toggle {
 	cursor: pointer;
 	z-index: 2;
+	position: relative;
+	i {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+	}
+}
+
+.dark-bg {
+	height: 3rem;
+	width: 3rem;
+	background-color: white;
+	border-radius: 50%;
 }
 
 .appearance-toggle #toggle-bg {
@@ -70,19 +85,24 @@ body.hide {
 }
 
 .nav-links {
+	@include flex(center, center, column);
+	flex-wrap: wrap;
 	position: absolute;
 	left: 50%;
 	top: 50%;
 	transform: translate(-50%, -50%);
 	font-size: 4rem;
+	i {
+		color: white;
+		margin-right: 2rem;
+		transform: scale(0.85);
+		text-shadow: 0px 3px 6px rgba($color: #000000, $alpha: 0.2);
+	}
 }
 
 .nav-link-item {
 	@include flex(center, center, row);
 	margin: 2rem;
-	svg {
-		margin-right: 2rem;
-	}
 }
 
 .nav-link-item h2 {
@@ -111,6 +131,9 @@ body.hide {
 	left: 0;
 	ul {
 		@include flex(space-around, center, row);
+	}
+	i {
+		color: white;
 	}
 }
 
@@ -172,6 +195,7 @@ footer {
 	@include flex(center, center, column);
 	// background: linear-gradient(to bottom right, $green1, $green2);
 	// background-color: #00201d;
+
 	padding: 2rem 0;
 	overflow-x: hidden;
 	width: 100%;
@@ -187,12 +211,17 @@ footer {
 	ul {
 		@include flex(space-around, center, row);
 	}
+	i {
+		color: white;
+	}
 }
 
 .cta-footer {
-	margin-bottom: 3rem;
-	@include flex(space-evenly, center, row);
+	margin: 0 3rem 2rem 3rem;
+	@include flex(center, center, row);
 	h1 {
-		margin-right: 4rem;
+		text-align: center;
+		font-size: 4rem;
+		margin-right: 2rem;
 	}
 }

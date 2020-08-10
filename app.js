@@ -5,6 +5,7 @@ const box2 = document.querySelector(".box2");
 
 //for Dark/Light Mode
 const darkBtn = document.querySelector(".appearance-toggle");
+const darkBtnIcon = document.querySelector(".appearance-toggle i");
 
 //for scrollmagic
 const animElement = document.querySelectorAll(".anim-el");
@@ -225,11 +226,6 @@ const skillsListItem = document.querySelectorAll(".skills-list li");
 const skillsList = document.querySelectorAll(".skills-list");
 const skillIcon2 = document.querySelectorAll(".skill-icon");
 
-//select all items elligible to toggle from dark to light
-//check if classlist contains 'light'
-//switch darkBtn innerHTML
-//add light class to them (default is dark)
-//modify each class individually
 function darkModeToggle() {
 	const darkItem = document.querySelectorAll(".dark-item");
 	gsap.fromTo(darkBtn, 0.3, { ease: "power2.inOut", scale: 0.8 }, { scale: 1 });
@@ -240,26 +236,16 @@ function darkModeToggle() {
 		{ rotate: -360 }
 	);
 	// if (darkBtn.classList.contains("light")) {
-	// 	gsap.to(darkBtn, 0.2, { rotate: 360, ease: "power2.inOut" });
-	// 	darkBtn.innerHTML = `<svgxmlns="http://www.w3.org/2000/svg"width="30"height="30"viewBox="0 0 30 30"><pathid="toggle-bg"class="dark-item"d="M15,0A15,15,0,1,1,0,15,15,15,0,0,1,15,0Z"fill="#272b2e"/><patclass="dark-itemid="toggle-moond="M18.846,16.436c-.119,0-.239.008-.358.008a7.252,7.252,0,0,1-5.216-2.2,7.494,7.494,0,0,1-2.16-5.3,7.588,7.588,0,0,1,.72-3.237,10.722,10.722,0,0,1,.559-.963.162.162,0,0,0-.16-.251,7.956,7.956,0,0,0,1.213,15.8,7.755,7.755,0,0,0,5.961-2.8,7.514,7.514,0,0,0,.675-.9.166.166,0,0,0-.169-.251A7.025,7.025,0,0,1,18.846,16.436Ztransform="translate(1.985 2.605)fill="#ffffff"/></svgxmlns=>`;
+	// 	darkBtnIcon.innerHTML = `<i class="fas fa-sun fa-lg"></i>`;
 	// } else {
-	// 	darkBtn.innerHTML =
-	// 		'<svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30"><path d="M15,0A15,15,0,1,1,0,15,15,15,0,0,1,15,0Z" fill="#31363a"/><path d="M6.083,4.238,4.651,2.814,3.529,3.936,4.953,5.36Zm-2.2,4.5H1.5v1.591H3.887ZM11.048.825H9.456V3.172h1.591V.825Zm5.927,3.111L15.853,2.814,14.429,4.238,15.551,5.36l1.424-1.424Zm-2.554,10.9,1.424,1.432,1.122-1.122-1.432-1.424-1.114,1.114Zm2.2-6.095v1.591H19V8.742ZM10.252,4.763a4.774,4.774,0,1,0,4.774,4.774A4.778,4.778,0,0,0,10.252,4.763Zm-.8,13.486h1.591V15.9H9.456ZM3.529,15.138,4.651,16.26l1.424-1.432L4.953,13.706,3.529,15.138Z" transform="translate(5 5.138)" fill="#fff"/></svg>';
+	// 	darkBtnIcon.innerHTML = `<i class="fas fa-moon fa-lg"></i>`;
 	// }
+	darkBtnIcon.classList.toggle("fa-sun");
+	darkBtnIcon.classList.toggle("fa-moon");
 	document.body.classList.toggle("light");
 	darkItem.forEach((item) => {
 		item.classList.toggle("light");
 	});
-	// console.log(skillIcon2.classList.contains("light"));
-	// skillIcon2.forEach((item) => {
-	// 	if (item.classList.contains("light")) {
-	// 		item.innerHTML = `<img
-	// 							class="dark-item skill-icon"
-	// 							src="./svg/Icon awesome-js-dark.svg"
-	// 							alt=""
-	// 						/>`;
-	// 	}
-	// });
 }
 
 boxAnim();

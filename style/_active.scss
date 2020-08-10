@@ -54,8 +54,13 @@ body.light {
 	color: $bg-color;
 	list-style-image: url("../svg/check-dark.svg");
 }
-.toggle-appearance.light svg path {
-	fill: white;
+
+.fas.light {
+	color: white;
+}
+
+.dark-bg.light {
+	background-color: $bg-color;
 }
 
 .testimonial-wrapper.light {
