@@ -87,6 +87,17 @@ body.light {
 	}
 }
 
+.about-card.light {
+	background-color: white;
+}
+
+.about-text.light {
+	h2,
+	p {
+		color: $bg-color;
+	}
+}
+
 footer.light {
 	background-color: $bg-color;
 }

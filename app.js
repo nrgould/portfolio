@@ -241,6 +241,7 @@ function darkModeToggle() {
 	// 	darkBtnIcon.innerHTML = `<i class="fas fa-moon fa-lg"></i>`;
 	// }
 	darkBtnIcon.classList.toggle("fa-sun");
+	darkBtnIcon.classList.toggle("fa-lg");
 	darkBtnIcon.classList.toggle("fa-moon");
 	document.body.classList.toggle("light");
 	darkItem.forEach((item) => {

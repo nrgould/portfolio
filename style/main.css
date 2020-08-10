@@ -1172,6 +1172,15 @@ body.light {
   color: #131919;
 }
 
+.about-card.light {
+  background-color: white;
+}
+
+.about-text.light h2,
+.about-text.light p {
+  color: #131919;
+}
+
 footer.light {
   background-color: #131919;
 }
