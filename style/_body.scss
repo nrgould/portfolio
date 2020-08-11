@@ -88,7 +88,7 @@
 .skills-wrapper {
 	position: relative;
 	display: grid;
-	@include flex(center, center, row);
+	@include flex(center, space-evenly, row);
 	flex-wrap: wrap;
 }
 
@@ -394,7 +394,7 @@
 	@include flex(center, center, column);
 	flex: 2 1 35rem;
 	margin: 0 2rem 0 2rem;
-	padding: 4rem;
+	padding: 4rem 2rem;
 	h2,
 	p {
 		margin-bottom: 3rem;
@@ -418,8 +418,3 @@
 	// height: 100%;
 	// pointer-events: none;
 }
-// .nicholas-profile {
-// 	object-fit: cover;
-// 	width: 100%;
-// 	height: 100%;
-// }

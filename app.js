@@ -37,7 +37,7 @@ navLinks.addEventListener("click", closeNav);
 function boxAnim() {
 	let box1Tl = new gsap.timeline();
 	box1Tl.to(box1, {
-		duration: 3,
+		duration: 2,
 		repeat: -1,
 		repeatDelay: 0,
 		yoyo: false,
@@ -51,7 +51,7 @@ function boxAnim() {
 	});
 	let box2Tl = new gsap.timeline();
 	box2Tl.to(box2, {
-		duration: 3,
+		duration: 2,
 		repeat: -1,
 		repeatDelay: 0,
 		stagger: 1,
@@ -74,27 +74,30 @@ function scrollReveal() {
 	controller = new ScrollMagic.Controller();
 
 	animElement.forEach((el) => {
-		// const animRight = el.querySelectorAll(".anim-right");
-		// const animLeft = el.querySelectorAll(".anim-left");
 		const pageTl = gsap.timeline({
 			defaults: { duration: 1, ease: "power2.inOut" },
 		});
 		if (el.classList.contains("anim-right")) {
 			pageTl.fromTo(
 				el,
-				1,
+				0.75,
 				{ x: "-20%", opacity: 0, scale: 0.8 },
 				{ x: "0%", opacity: 1, scale: 1 }
 			);
 		} else if (el.classList.contains("anim-left")) {
 			pageTl.fromTo(
 				el,
-				1,
+				0.75,
 				{ x: "20%", opacity: 0, scale: 0.8 },
 				{ x: "0%", opacity: 1, scale: 1 }
 			);
 		} else if (el.classList.contains("anim-up")) {
-			pageTl.fromTo(el, 1, { y: "10%", opacity: 0 }, { y: "0%", opacity: 1 });
+			pageTl.fromTo(
+				el,
+				0.75,
+				{ y: "10%", opacity: 0 },
+				{ y: "0%", opacity: 1 }
+			);
 		}
 		pageScene = new ScrollMagic.Scene({
 			triggerElement: el,
@@ -131,7 +134,12 @@ function navToggle(e) {
 			y: -12,
 		});
 		//logo anim
-		gsap.to("#logo", 1, { ease: "power3.inOut", color: "white" });
+		gsap.fromTo(
+			"#logo",
+			1,
+			{ ease: "bounce.out", scale: 1.1 },
+			{ ease: "bounce.out", scale: 0.55 }
+		);
 		//nav overlay open
 		gsap.fromTo(
 			navOverlay,
@@ -241,8 +249,9 @@ function darkModeToggle() {
 	// 	darkBtnIcon.innerHTML = `<i class="fas fa-moon fa-lg"></i>`;
 	// }
 	darkBtnIcon.classList.toggle("fa-sun");
-	darkBtnIcon.classList.toggle("fa-lg");
+	// darkBtnIcon.classList.toggle("fa-lg");
 	darkBtnIcon.classList.toggle("fa-moon");
+	// darkBtnIcon.classList.toggle("fa-2x");
 	document.body.classList.toggle("light");
 	darkItem.forEach((item) => {
 		item.classList.toggle("light");
