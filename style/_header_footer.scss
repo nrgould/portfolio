@@ -47,6 +47,7 @@ body.hide {
 	cursor: pointer;
 	z-index: 2;
 	position: relative;
+	@include expand();
 	i {
 		position: absolute;
 		top: 50%;
@@ -107,6 +108,7 @@ body.hide {
 .nav-link-item {
 	@include flex(center, center, row);
 	margin: 1.8rem;
+	@include expand();
 }
 
 .nav-link-item h2 {
@@ -126,13 +128,14 @@ body.hide {
 	i {
 		color: white;
 	}
+	li {
+		@include expand();
+	}
 }
 
 //HERO SECTION
 
 .hero-section {
-	// min-height: 80vh;
-	// margin-bottom: 5rem;
 	overflow-x: hidden;
 }
 
@@ -200,6 +203,9 @@ footer {
 	width: 100%;
 	ul {
 		@include flex(space-around, center, row);
+	}
+	li {
+		@include expand();
 	}
 	i {
 		color: white;

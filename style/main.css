@@ -151,6 +151,13 @@ body.hide {
   cursor: pointer;
   z-index: 2;
   position: relative;
+  -webkit-transition: all 200ms ease;
+  transition: all 200ms ease;
+}
+
+.appearance-toggle:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
 }
 
 .appearance-toggle i {
@@ -255,6 +262,13 @@ body.hide {
       -ms-flex-direction: row;
           flex-direction: row;
   margin: 1.8rem;
+  -webkit-transition: all 200ms ease;
+  transition: all 200ms ease;
+}
+
+.nav-link-item:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
 }
 
 .nav-link-item h2 {
@@ -286,6 +300,16 @@ body.hide {
 
 .social-icons i {
   color: white;
+}
+
+.social-icons li {
+  -webkit-transition: all 200ms ease;
+  transition: all 200ms ease;
+}
+
+.social-icons li:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
 }
 
 .hero-section {
@@ -426,6 +450,16 @@ footer h3 {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
+}
+
+.social-icons-footer li {
+  -webkit-transition: all 200ms ease;
+  transition: all 200ms ease;
+}
+
+.social-icons-footer li:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
 }
 
 .social-icons-footer i {
@@ -668,6 +702,16 @@ footer h3 {
   grid-gap: 1.8rem;
   -webkit-transition: all 500ms ease;
   transition: all 500ms ease;
+}
+
+.skills-card li {
+  -webkit-transition: all 200ms ease;
+  transition: all 200ms ease;
+}
+
+.skills-card li:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
 }
 
 .skills-card:nth-child(6) {
@@ -934,6 +978,32 @@ footer h3 {
   font-weight: 600;
 }
 
+.img1,
+.img2,
+.img3,
+.img4,
+.img5,
+.img6,
+.img7,
+.img8,
+.img9 {
+  -webkit-transition: all 200ms ease;
+  transition: all 200ms ease;
+}
+
+.img1:hover,
+.img2:hover,
+.img3:hover,
+.img4:hover,
+.img5:hover,
+.img6:hover,
+.img7:hover,
+.img8:hover,
+.img9:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+
 .photo-grid {
   line-height: 0;
   -webkit-column-count: 3;
@@ -1013,8 +1083,8 @@ footer h3 {
 }
 
 .about-card:hover {
-  -webkit-transform: scale(1.05);
-          transform: scale(1.05);
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
 }
 
 .about-content {
@@ -1079,7 +1149,7 @@ footer h3 {
           flex: 1 1 40rem;
   width: 100%;
   height: 60rem;
-  background-image: url("../img/IMG_1399_opt.jpg");
+  background-image: url("../img/IMG_1399_opt-2.jpg");
   background-repeat: no-repeat;
   background-position: center top;
   background-size: cover;
@@ -1299,6 +1369,9 @@ footer.light {
   }
   .work-card {
     min-width: 30%;
+  }
+  .nav-link-item {
+    margin-bottom: 4rem;
   }
 }
 

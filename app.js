@@ -15,6 +15,7 @@ let pageScene;
 //for NAV
 const burger = document.querySelector(".burger");
 const navLinks = document.querySelector(".nav-links");
+const navOverlay = document.querySelector(".nav-overlay");
 
 //for work section
 const workCard = document.querySelectorAll(".work-card");
@@ -25,10 +26,6 @@ const skillIcon = document.querySelectorAll(".icons-collection svg");
 
 //EVENT LISTENERS
 
-// readMoreBtn.forEach((btn) => {
-// 	btn.addEventListener("click", () => readMore(idx));
-// });
-
 darkBtn.addEventListener("click", darkModeToggle);
 burger.addEventListener("click", navToggle);
 navLinks.addEventListener("click", closeNav);
@@ -37,11 +34,11 @@ navLinks.addEventListener("click", closeNav);
 function boxAnim() {
 	let box1Tl = new gsap.timeline();
 	box1Tl.to(box1, {
-		duration: 2,
+		duration: 3,
 		repeat: -1,
 		repeatDelay: 0,
 		yoyo: false,
-		ease: "power1.inOut(2)",
+		// ease: "power1.inOut(2)",
 		motionPath: {
 			path: boxPath,
 			align: boxPath,
@@ -51,12 +48,12 @@ function boxAnim() {
 	});
 	let box2Tl = new gsap.timeline();
 	box2Tl.to(box2, {
-		duration: 2,
+		duration: 3,
 		repeat: -1,
 		repeatDelay: 0,
-		stagger: 1,
+		// stagger: 1,
 		yoyo: false,
-		ease: "power1.inOut(2)",
+		// ease: "power1.inOut(2)",
 		motionPath: {
 			path: boxPath,
 			align: boxPath,
@@ -69,7 +66,6 @@ function boxAnim() {
 }
 
 //Scroll Animations
-
 function scrollReveal() {
 	controller = new ScrollMagic.Controller();
 
@@ -102,8 +98,7 @@ function scrollReveal() {
 		pageScene = new ScrollMagic.Scene({
 			triggerElement: el,
 			triggerHook: 0.8,
-			// duration: "50%",
-			reverse: true,
+			reverse: false,
 		})
 			.setTween(pageTl)
 			.addTo(controller);
@@ -111,8 +106,6 @@ function scrollReveal() {
 }
 
 //NAV TOGGLE
-
-const navOverlay = document.querySelector(".nav-overlay");
 
 function navToggle(e) {
 	if (!e.target.classList.contains("active")) {
@@ -136,10 +129,18 @@ function navToggle(e) {
 		//logo anim
 		gsap.fromTo(
 			"#logo",
-			1,
-			{ ease: "bounce.out", scale: 1.1 },
-			{ ease: "bounce.out", scale: 0.55 }
+			0.35,
+			{ ease: "power2.inOut", scale: 0.55 },
+			{ ease: "power2.inOut", scale: 1.1 }
 		);
+		gsap
+			.fromTo(
+				"#logo",
+				0.5,
+				{ ease: "bounce.out", scale: 1.1 },
+				{ ease: "bounce.out", scale: 0.55 }
+			)
+			.delay(0.35);
 		//nav overlay open
 		gsap.fromTo(
 			navOverlay,
@@ -160,7 +161,6 @@ function navToggle(e) {
 		// 	clipPath: "circle(2500px at 100% -10%)",
 		// });
 		document.body.classList.add("hide");
-		// document.querySelector(".line2").classList.add("hide");
 	} else {
 		e.target.classList.remove("active");
 		//x => burger
@@ -200,7 +200,6 @@ function navToggle(e) {
 		// 	clipPath: "circle(50px at 100% -10%)",
 		// });
 		document.body.classList.remove("hide");
-		// document.querySelector(".line2").classList.remove("hide");
 	}
 }
 
@@ -236,22 +235,14 @@ const skillIcon2 = document.querySelectorAll(".skill-icon");
 
 function darkModeToggle() {
 	const darkItem = document.querySelectorAll(".dark-item");
-	gsap.fromTo(darkBtn, 0.3, { ease: "power2.inOut", scale: 0.8 }, { scale: 1 });
 	gsap.fromTo(
 		darkBtn,
-		0.2,
-		{ ease: "power2.inOut", rotate: 0 },
-		{ rotate: -360 }
+		0.4,
+		{ ease: "power2.inOut", scale: 0.65, rotate: 0 },
+		{ scale: 1, rotate: 360 }
 	);
-	// if (darkBtn.classList.contains("light")) {
-	// 	darkBtnIcon.innerHTML = `<i class="fas fa-sun fa-lg"></i>`;
-	// } else {
-	// 	darkBtnIcon.innerHTML = `<i class="fas fa-moon fa-lg"></i>`;
-	// }
 	darkBtnIcon.classList.toggle("fa-sun");
-	// darkBtnIcon.classList.toggle("fa-lg");
 	darkBtnIcon.classList.toggle("fa-moon");
-	// darkBtnIcon.classList.toggle("fa-2x");
 	document.body.classList.toggle("light");
 	darkItem.forEach((item) => {
 		item.classList.toggle("light");

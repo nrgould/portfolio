@@ -28,7 +28,7 @@ $green2: #5dd98a;
 @mixin expand() {
 	transition: all 200ms ease;
 	&:hover {
-		transform: scale(1.05);
+		transform: scale(1.1);
 	}
 }
 
