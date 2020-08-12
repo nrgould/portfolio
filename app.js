@@ -96,7 +96,7 @@ function scrollReveal() {
 		pageScene = new ScrollMagic.Scene({
 			triggerElement: el,
 			triggerHook: 0.8,
-			reverse: true,
+			reverse: false,
 		})
 			.setTween(pageTl)
 			.addTo(controller);
@@ -176,7 +176,7 @@ function navToggle(e) {
 			rotate: "0",
 			y: 0,
 		});
-		gsap.to("#logo", 1, { ease: "power3.inOut", color: "black" });
+
 		//nav overlay close
 		gsap.fromTo(
 			navOverlay,
@@ -205,7 +205,7 @@ function closeNav() {
 	gsap.to(".line1", 0.5, { rotate: "0", y: 0, background: "white" });
 	gsap.to(".line2", 0.5, { opacity: 1, x: 0, background: "white" });
 	gsap.to(".line3", 0.5, { rotate: "0", y: 0, background: "white" });
-	gsap.to("#logo", 1, { color: "white" });
+
 	gsap.fromTo(
 		navOverlay,
 		0.75,
@@ -225,19 +225,19 @@ function closeNav() {
 }
 
 //DARK MODE
-
 const skillsListItem = document.querySelectorAll(".skills-list li");
 const skillsList = document.querySelectorAll(".skills-list");
 const skillIcon2 = document.querySelectorAll(".skill-icon");
 
 function darkModeToggle() {
 	const darkItem = document.querySelectorAll(".dark-item");
-	gsap.fromTo(
-		darkBtn,
-		0.4,
-		{ ease: "power2.inOut", scale: 0.65, rotate: 0 },
-		{ scale: 1, rotate: 360 }
-	);
+	gsap.fromTo(darkBtn, 1, { ease: "power3.inOut", scale: 0.5 }, { scale: 1 });
+	// gsap.fromTo(
+	// 	darkBtn,
+	// 	0.3,
+	// 	{ ease: "power3.inOut", rotate: 0 },
+	// 	{ ease: "power3.inOut", rotate: -360 }
+	// );
 	darkBtnIcon.classList.toggle("fa-sun");
 	darkBtnIcon.classList.toggle("fa-moon");
 	document.body.classList.toggle("light");

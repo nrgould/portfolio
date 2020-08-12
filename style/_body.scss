@@ -115,10 +115,6 @@
 		align-items: center;
 		grid-template-columns: 1fr 1fr 1fr;
 		grid-gap: 1.8rem;
-		transition: all 500ms ease;
-	}
-	li {
-		@include expand();
 	}
 }
 
@@ -146,11 +142,6 @@
 .icons-collection svg {
 	transition: all 250ms ease;
 	width: 100%;
-	overflow: visible;
-}
-
-#test-svg {
-	// width: 100%;
 	overflow: visible;
 }
 
@@ -184,8 +175,20 @@
 	font-weight: 600;
 	text-align: center;
 	color: white;
+	transition: all 200ms ease;
 }
 
+.skills-list:hover li {
+	transform: scale(0.9);
+	opacity: 0.5;
+	filter: blur(3px);
+}
+
+.skills-list:hover li:hover {
+	transform: scale(1.1);
+	filter: blur(0px);
+	opacity: 1;
+}
 .icon-bg {
 	background-color: $bg-color;
 	width: 8rem;
@@ -329,18 +332,6 @@
 	}
 }
 
-.img1,
-.img2,
-.img3,
-.img4,
-.img5,
-.img6,
-.img7,
-.img8,
-.img9 {
-	@include expand();
-}
-
 .photo-grid {
 	line-height: 0;
 	column-count: 3;
@@ -382,19 +373,15 @@
 
 .about-card {
 	background-color: $dark-card-color;
-	margin-top: 5rem;
 	border: 7px solid;
 	border-image-slice: 1;
 	border-image-source: linear-gradient(to bottom right, $green1, $green2);
 	flex-wrap: wrap;
-	transition: all 200ms ease;
-	overflow: hidden;
 	@include shadow();
 	p {
 		text-align: center;
 		line-height: 3.6rem;
 	}
-	@include expand();
 }
 
 .about-content {

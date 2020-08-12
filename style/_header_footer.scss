@@ -94,6 +94,7 @@ body.hide {
 	left: 50%;
 	top: 50%;
 	transform: translate(-50%, -50%);
+
 	i {
 		color: white;
 		margin-right: 1.6rem;
@@ -105,10 +106,25 @@ body.hide {
 	}
 }
 
+.nav-links li {
+	transition: all 200ms ease;
+}
+
+.nav-links:hover li {
+	opacity: 0.5;
+	transform: scale(0.9);
+	filter: blur(3px);
+}
+
+.nav-links:hover li:hover {
+	opacity: 1;
+	transform: scale(1.075);
+	filter: blur(0px);
+}
+
 .nav-link-item {
 	@include flex(center, center, row);
 	margin: 1.8rem;
-	@include expand();
 }
 
 .nav-link-item h2 {

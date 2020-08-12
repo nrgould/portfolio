@@ -247,6 +247,27 @@ body.hide {
   font-size: 4rem;
 }
 
+.nav-links li {
+  -webkit-transition: all 200ms ease;
+  transition: all 200ms ease;
+}
+
+.nav-links:hover li {
+  opacity: 0.5;
+  -webkit-transform: scale(0.9);
+          transform: scale(0.9);
+  -webkit-filter: blur(3px);
+          filter: blur(3px);
+}
+
+.nav-links:hover li:hover {
+  opacity: 1;
+  -webkit-transform: scale(1.075);
+          transform: scale(1.075);
+  -webkit-filter: blur(0px);
+          filter: blur(0px);
+}
+
 .nav-link-item {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -262,13 +283,6 @@ body.hide {
       -ms-flex-direction: row;
           flex-direction: row;
   margin: 1.8rem;
-  -webkit-transition: all 200ms ease;
-  transition: all 200ms ease;
-}
-
-.nav-link-item:hover {
-  -webkit-transform: scale(1.1);
-          transform: scale(1.1);
 }
 
 .nav-link-item h2 {
@@ -700,18 +714,6 @@ footer h3 {
   -ms-grid-columns: 1fr 1fr 1fr;
       grid-template-columns: 1fr 1fr 1fr;
   grid-gap: 1.8rem;
-  -webkit-transition: all 500ms ease;
-  transition: all 500ms ease;
-}
-
-.skills-card li {
-  -webkit-transition: all 200ms ease;
-  transition: all 200ms ease;
-}
-
-.skills-card li:hover {
-  -webkit-transform: scale(1.1);
-          transform: scale(1.1);
 }
 
 .skills-card:nth-child(6) {
@@ -745,10 +747,6 @@ footer h3 {
   -webkit-transition: all 250ms ease;
   transition: all 250ms ease;
   width: 100%;
-  overflow: visible;
-}
-
-#test-svg {
   overflow: visible;
 }
 
@@ -790,6 +788,24 @@ footer h3 {
   font-weight: 600;
   text-align: center;
   color: white;
+  -webkit-transition: all 200ms ease;
+  transition: all 200ms ease;
+}
+
+.skills-list:hover li {
+  -webkit-transform: scale(0.9);
+          transform: scale(0.9);
+  opacity: 0.5;
+  -webkit-filter: blur(3px);
+          filter: blur(3px);
+}
+
+.skills-list:hover li:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+  -webkit-filter: blur(0px);
+          filter: blur(0px);
+  opacity: 1;
 }
 
 .icon-bg {
@@ -978,32 +994,6 @@ footer h3 {
   font-weight: 600;
 }
 
-.img1,
-.img2,
-.img3,
-.img4,
-.img5,
-.img6,
-.img7,
-.img8,
-.img9 {
-  -webkit-transition: all 200ms ease;
-  transition: all 200ms ease;
-}
-
-.img1:hover,
-.img2:hover,
-.img3:hover,
-.img4:hover,
-.img5:hover,
-.img6:hover,
-.img7:hover,
-.img8:hover,
-.img9:hover {
-  -webkit-transform: scale(1.1);
-          transform: scale(1.1);
-}
-
 .photo-grid {
   line-height: 0;
   -webkit-column-count: 3;
@@ -1063,28 +1053,18 @@ footer h3 {
 
 .about-card {
   background-color: #272b2e;
-  margin-top: 5rem;
   border: 7px solid;
   border-image-slice: 1;
   border-image-source: linear-gradient(to bottom right, #00a295, #5dd98a);
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  -webkit-transition: all 200ms ease;
-  transition: all 200ms ease;
-  overflow: hidden;
   -webkit-box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.2);
           box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.2);
-  transition: all 200ms ease;
 }
 
 .about-card p {
   text-align: center;
   line-height: 3.6rem;
-}
-
-.about-card:hover {
-  -webkit-transform: scale(1.1);
-          transform: scale(1.1);
 }
 
 .about-content {
