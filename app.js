@@ -25,7 +25,6 @@ const readMoreBtn = document.querySelectorAll(".read-more");
 const skillIcon = document.querySelectorAll(".icons-collection svg");
 
 //EVENT LISTENERS
-
 darkBtn.addEventListener("click", darkModeToggle);
 burger.addEventListener("click", navToggle);
 navLinks.addEventListener("click", closeNav);
@@ -38,7 +37,7 @@ function boxAnim() {
 		repeat: -1,
 		repeatDelay: 0,
 		yoyo: false,
-		// ease: "power1.inOut(2)",
+		ease: "power1.inOut(2)",
 		motionPath: {
 			path: boxPath,
 			align: boxPath,
@@ -51,9 +50,8 @@ function boxAnim() {
 		duration: 3,
 		repeat: -1,
 		repeatDelay: 0,
-		// stagger: 1,
 		yoyo: false,
-		// ease: "power1.inOut(2)",
+		ease: "power1.inOut(2)",
 		motionPath: {
 			path: boxPath,
 			align: boxPath,
@@ -98,7 +96,7 @@ function scrollReveal() {
 		pageScene = new ScrollMagic.Scene({
 			triggerElement: el,
 			triggerHook: 0.8,
-			reverse: false,
+			reverse: true,
 		})
 			.setTween(pageTl)
 			.addTo(controller);
@@ -106,7 +104,6 @@ function scrollReveal() {
 }
 
 //NAV TOGGLE
-
 function navToggle(e) {
 	if (!e.target.classList.contains("active")) {
 		e.target.classList.add("active");
