@@ -231,7 +231,12 @@ const skillIcon2 = document.querySelectorAll(".skill-icon");
 
 function darkModeToggle() {
 	const darkItem = document.querySelectorAll(".dark-item");
-	gsap.fromTo(darkBtn, 1, { ease: "power3.inOut", scale: 0.5 }, { scale: 1 });
+	gsap.fromTo(
+		darkBtn,
+		0.25,
+		{ ease: "power3.inOut", scale: 0.5 },
+		{ scale: 1 }
+	);
 	// gsap.fromTo(
 	// 	darkBtn,
 	// 	0.3,
