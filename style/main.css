@@ -18,33 +18,33 @@ body {
 h1 {
   font-size: 6rem;
   font-family: "Open Sans Condensed", sans-serif;
-  color: #ecfffb;
+  color: white;
 }
 
 h2 {
   font-size: 4rem;
   font-family: "Open Sans Condensed", sans-serif;
-  color: #ecfffb;
+  color: white;
 }
 
 h3 {
   font-size: 3.5rem;
   font-family: "Open Sans Condensed", sans-serif;
-  color: #ecfffb;
+  color: white;
 }
 
 h4 {
   font-size: 2.4rem;
   font-family: "Raleway", sans-serif;
   font-weight: 500;
-  color: #ecfffb;
+  color: white;
 }
 
 h5 {
   font-size: 1.2rem;
   font-family: "Raleway", sans-serif;
   font-weight: 500;
-  color: #ecfffb;
+  color: white;
 }
 
 li,
@@ -55,8 +55,8 @@ input,
 label {
   font-size: 2rem;
   font-family: "Raleway", sans-serif;
-  color: #ecfffb;
   line-height: 3.2rem;
+  color: white;
 }
 
 ul {
@@ -88,7 +88,6 @@ a {
 }
 
 nav {
-  min-height: 5vh;
   background: -webkit-gradient(linear, left top, right bottom, from(#00a295), to(#5dd98a));
   background: linear-gradient(to bottom right, #00a295, #5dd98a);
   -webkit-box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.2);
@@ -97,12 +96,10 @@ nav {
 
 #logo {
   z-index: 2;
-  -webkit-transform: scale(0.55);
-          transform: scale(0.55);
 }
 
 #logo svg {
-  height: 5rem;
+  height: 3.8rem;
   width: 100%;
   text-shadow: 0px 3px 6px rgba(0, 0, 0, 0.2);
 }
@@ -123,7 +120,7 @@ nav {
 .nav-header {
   width: 95%;
   margin: auto;
-  padding: 1rem;
+  padding: 0.5rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -202,15 +199,15 @@ body.hide {
 .burger .line1,
 .burger .line2,
 .burger .line3 {
-  height: 0.5rem;
-  width: 3.6rem;
+  height: 0.4rem;
+  width: 2.8rem;
   background-color: white;
   pointer-events: none;
 }
 
 .burger .line1,
 .burger .line2 {
-  margin-bottom: 0.7rem;
+  margin-bottom: 0.5rem;
 }
 
 .nav-links {
@@ -727,8 +724,8 @@ footer h3 {
 }
 
 .icons-collection.icons-design {
-  -ms-grid-columns: 1fr 1fr;
-      grid-template-columns: 1fr 1fr;
+  -ms-grid-columns: 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr;
   grid-gap: 2.4rem;
 }
 

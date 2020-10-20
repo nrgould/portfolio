@@ -1,16 +1,16 @@
 //NAV SECTION
 
 nav {
-	min-height: 5vh;
+	// min-height: 5vh;
 	background: linear-gradient(to bottom right, $green1, $green2);
 	@include shadow();
 }
 
 #logo {
 	z-index: 2;
-	transform: scale(0.55);
+	// transform: scale(0.35);
 	svg {
-		height: 5rem;
+		height: 3.8rem;
 		width: 100%;
 		text-shadow: 0px 3px 6px rgba($color: #000000, $alpha: 0.2);
 	}
@@ -31,7 +31,7 @@ nav {
 
 .nav-header {
 	@include width(95%);
-	padding: 1rem;
+	padding: 0.5rem;
 	@include flex(space-between, center, row);
 }
 
@@ -75,15 +75,15 @@ body.hide {
 	.line1,
 	.line2,
 	.line3 {
-		height: 0.5rem;
-		width: 3.6rem;
+		height: 0.4rem;
+		width: 2.8rem;
 		background-color: white;
 		pointer-events: none;
 		// @include shadow();
 	}
 	.line1,
 	.line2 {
-		margin-bottom: 0.7rem;
+		margin-bottom: 0.5rem;
 	}
 }
 

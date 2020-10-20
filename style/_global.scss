@@ -16,27 +16,32 @@ body {
 h1 {
 	font-size: $header1;
 	font-family: "Open Sans Condensed", sans-serif;
+	color: white;
 }
 
 h2 {
 	font-size: $header2;
 	font-family: "Open Sans Condensed", sans-serif;
+	color: white;
 }
 
 h3 {
 	font-size: $header3;
 	font-family: "Open Sans Condensed", sans-serif;
+	color: white;
 }
 
 h4 {
 	font-size: $header4;
 	font-family: "Raleway", sans-serif;
 	font-weight: 500;
+	color: white;
 }
 h5 {
 	font-size: $header5;
 	font-family: "Raleway", sans-serif;
 	font-weight: 500;
+	color: white;
 }
 
 li,
@@ -48,6 +53,7 @@ label {
 	font-size: $text;
 	font-family: "Raleway", sans-serif;
 	line-height: 3.2rem;
+	color: white;
 }
 
 ul {

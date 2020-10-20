@@ -112,7 +112,7 @@ function navToggle(e) {
 		gsap.to(".line1", 0.5, {
 			ease: "power3.inOut",
 			rotate: "45",
-			y: 12,
+			y: 9,
 		});
 		gsap.to(".line2", 0.5, {
 			ease: "power3.inOut",
@@ -121,7 +121,7 @@ function navToggle(e) {
 		gsap.to(".line3", 0.5, {
 			ease: "power3.inOut",
 			rotate: "-45",
-			y: -12,
+			y: -9,
 		});
 		//logo anim
 		gsap.fromTo(
