@@ -1,8 +1,59 @@
+//projects section
+
+#projects {
+	@include width(90%);
+	margin-top: 20rem;
+	margin-bottom: 20rem;
+}
+
+#projects h1 {
+	text-align: center;
+	font-size: 8rem;
+}
+
+.projects-wrapper {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+	grid-gap: 5rem;
+	justify-items: center;
+}
+
+.project-card {
+	background-color: $dark-card-color;
+	max-width: 60rem;
+	border-radius: 20px;
+	// min-height: 50vh;
+	margin: 4rem 2rem;
+	padding: 6rem 4rem;
+	// border: 1px solid #242424;
+	@include shadow();
+	@include flex(space-around, center, column);
+	// flex: 1 1 20rem;
+	img,
+	h3,
+	p {
+		margin-bottom: 3.2rem;
+	}
+	p {
+		text-align: center;
+		max-width: 80%;
+	}
+	img {
+		max-width: 85%;
+	}
+	h5 {
+		color: #808080;
+		font-size: 1.6rem;
+		font-weight: bold;
+	}
+}
+
 //WORK SECTION
 
 .work-section {
 	@include width(98%);
 	margin-top: 20rem;
+	margin-bottom: 20rem;
 	position: relative;
 }
 
@@ -15,9 +66,10 @@
 	background-color: $dark-card-color;
 	min-height: 50vh;
 	min-width: 95%;
+	border-radius: 20px;
 	margin: 4rem 2rem;
-	padding: 4rem 3rem;
-	border: 1px solid #242424;
+	padding: 6rem 4rem;
+	// border: 1px solid #242424;
 	@include shadow();
 	@include flex(space-around, center, column);
 	flex: 1 1 40rem;
@@ -35,6 +87,7 @@
 	}
 	p {
 		line-height: 4rem;
+		max-width: 85%;
 	}
 }
 
@@ -170,7 +223,7 @@
 
 .skills-list li {
 	list-style-position: inside;
-	list-style-image: url("../svg/check-white.svg");
+	list-style-image: url('../svg/check-white.svg');
 	margin-bottom: 2rem;
 	font-weight: 600;
 	text-align: center;
@@ -218,7 +271,7 @@
 	}
 	&::before,
 	&::after {
-		content: "";
+		content: '';
 		width: 100%;
 		height: 0.5rem;
 		background: linear-gradient(to right, $green1, $green2);
@@ -413,7 +466,7 @@
 	flex: 1 1 40rem;
 	width: 100%;
 	height: 60rem;
-	background-image: url("../img/IMG_1399_opt-2.jpg");
+	background-image: url('../img/IMG_1399_opt-2.jpg');
 	background-repeat: no-repeat;
 	background-position: center top;
 	background-size: cover;

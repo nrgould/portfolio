@@ -9,7 +9,11 @@
 		/>
 		<meta http-equiv="X-UA-Compatible" content="IE=7" />
 		<link rel="stylesheet" href="./style/main.css" />
-		<link rel="shortcut icon" href="./img/NG_favicon.png" type="image/x-icon" />
+		<link
+			rel="shortcut icon"
+			href="./img/NG_favicon.png"
+			type="image/x-icon"
+		/>
 		<link rel="apple-touch-icon" href="./img/IOS_180.png" />
 		<title>Nicholas Gould</title>
 		<!-- Hotjar Tracking Code for https://www.nicholasgould.net -->
@@ -21,12 +25,17 @@
 						(h.hj.q = h.hj.q || []).push(arguments);
 					};
 				h._hjSettings = { hjid: 2000426, hjsv: 6 };
-				a = o.getElementsByTagName("head")[0];
-				r = o.createElement("script");
+				a = o.getElementsByTagName('head')[0];
+				r = o.createElement('script');
 				r.async = 1;
 				r.src = t + h._hjSettings.hjid + j + h._hjSettings.hjsv;
 				a.appendChild(r);
-			})(window, document, "https://static.hotjar.com/c/hotjar-", ".js?sv=");
+			})(
+				window,
+				document,
+				'https://static.hotjar.com/c/hotjar-',
+				'.js?sv='
+			);
 		</script>
 		<!-- Global site tag (gtag.js) - Google Analytics -->
 		<script
@@ -38,9 +47,9 @@
 			function gtag() {
 				dataLayer.push(arguments);
 			}
-			gtag("js", new Date());
+			gtag('js', new Date());
 
-			gtag("config", "UA-178459934-1");
+			gtag('config', 'UA-178459934-1');
 		</script>
 	</head>
 	<body>
@@ -50,8 +59,9 @@
 					<div class="dark-bg"></div>
 					<i class="fas fa-moon fa-lg"></i>
 				</div>
-				<a href="./index.html" id="logo"
-					><svg
+				<a href="./index.html" id="logo">
+					<h3>NG</h3>
+					<!-- <svg
 						xmlns="http://www.w3.org/2000/svg"
 						xmlns:xlink="http://www.w3.org/1999/xlink"
 						width="395"
@@ -59,7 +69,9 @@
 						viewBox="0 0 395 246"
 					>
 						<defs>
-							<clipPath id="b"><rect width="395" height="246" /></clipPath>
+							<clipPath id="b">
+								<rect width="395" height="246" />
+							</clipPath>
 						</defs>
 						<g id="a" clip-path="url(#b)">
 							<g transform="translate(-16 -114)">
@@ -120,8 +132,8 @@
 								</text>
 							</g>
 						</g>
-					</svg></a
-				>
+					</svg> -->
+				</a>
 				<div class="burger">
 					<div class="line1"></div>
 					<div class="line2"></div>
@@ -134,6 +146,12 @@
 						<li>
 							<div class="nav-link-item">
 								<i class="fas fa-hammer fa-2x"></i>
+								<a href="#projects"><h2>PROJECTS</h2></a>
+							</div>
+						</li>
+						<li>
+							<div class="nav-link-item">
+								<i class="fas fa-briefcase fa-2x"></i>
 								<a href="#work"><h2>WORK</h2></a>
 							</div>
 						</li>
@@ -225,39 +243,94 @@
 					</div>
 				</div>
 			</section>
+			<section id="projects">
+				<h1 class="bg-text dark-item">PROJECTS</h1>
+				<div class="projects-wrapper">
+					<div class="project-card dark-item anim-el anim-up">
+						<img
+							src="./img/project-thumb-1.png"
+							alt="Athemaeum website thumbnail"
+						/>
+						<h3>Athemaeum site</h3>
+						<p>
+							I built Athemaeum's website from the ground up with
+							a sleek and professional–yet playful and friendly
+							aesthetic.
+						</p>
+						<h5>HTML, CSS/SCSS, JavaScript</h5>
+					</div>
+					<div class="project-card dark-item anim-el anim-left">
+						<img
+							src="./img/project-thumb-2.png"
+							alt="speedreed app thumbnail"
+						/>
+						<h3>SpeedReed</h3>
+						<p>
+							SpeedReed is a simple app that makes reading
+							long-form text much easier by allowing your eyes to
+							focus on the center of the screen.
+						</p>
+						<h5>React/Redux</h5>
+					</div>
+					<div class="project-card dark-item anim-el anim-right">
+						<img
+							src="./img/project-thumb-3.png"
+							alt="studyflow screenshot"
+						/>
+						<h3>StudyFlow</h3>
+						<p>
+							StudyFlow is my passion project in early
+							development. It's an app that helps students
+							organize assignments and improve study habits.
+						</p>
+						<h5>React, Redux & Firebase</h5>
+					</div>
+				</div>
+			</section>
 			<section id="work" class="work-section">
 				<!-- <h1>WORK</h1> -->
 				<h1 class="bg-text dark-item">WORK</h1>
 				<div class="work-wrapper">
 					<div class="work-card dark-item anim-el anim-up">
 						<div class="work-card-header">
-							<img src="./img/FPV Logo.svg" alt="Focus Point Visuals Logo" />
+							<img
+								src="./img/FPV Logo.svg"
+								alt="Focus Point Visuals Logo"
+							/>
 							<h2>FOCUS POINT VISUALS</h2>
 						</div>
-						<h3>Digital Marketing & Landing Page Design (2017-present)</h3>
+						<h3>
+							Digital Marketing & Landing Page Design
+							(2017-present)
+						</h3>
 						<!-- <button class="read-more">Read More</button> -->
 						<p>
-							Here I developed valuable sales and communication experience to be
-							able to run my own business and to deal with clients. I also
-							developed advanced skills in digital marketing (Facebook & Google
-							Ads + web design) in order to ensure profitable campaigns for
+							Here I developed valuable sales and communication
+							experience to be able to run my own business and to
+							deal with clients. I also developed advanced skills
+							in digital marketing (Facebook & Google Ads + web
+							design) in order to ensure profitable campaigns for
 							clients.
-							<b>Notably achieved a 550% ROI</b> on a Facebook Ad Campaign for
-							Western Piedmont Community College.
+							<b>Notably achieved a 550% ROI</b> on a Facebook Ad
+							Campaign for Western Piedmont Community College.
 						</p>
 					</div>
 					<div class="work-card dark-item anim-el anim-right">
 						<div class="work-card-header">
-							<img src="./img/BNSTLK_logo.svg" alt="Focus Point Visuals Logo" />
+							<img
+								src="./img/BNSTLK_logo.svg"
+								alt="Focus Point Visuals Logo"
+							/>
 							<h2>BEANSTALK ZIPLINES</h2>
 						</div>
 						<h3>Tour Guide (2017-2019)</h3>
 						<!-- <button class="read-more">Read More</button> -->
 						<p>
-							At Beanstalk I learned effective communication and leadership
-							skills to guide a group of up to 12 guests safely through a
-							zipline course upwards of 60ft in the air. As guides we were
-							responsible for making sure all guests follow necessary safety
+							At Beanstalk I learned effective communication and
+							leadership skills to guide a group of up to 12
+							guests safely through a zipline course upwards of
+							60ft in the air. As guides we were responsible for
+							making sure all guests follow necessary safety
 							precautions and to ensure no one gets hurt.
 						</p>
 					</div>
@@ -266,7 +339,11 @@
 			<section class="client-logos dark-item" id="logos">
 				<h2>SOME ORGANIZATIONS IVE WORKED WITH</h2>
 				<div class="logos-wrapper">
-					<img src="./img/Client logos/ef1.svg" alt="" class="logo1 logo" />
+					<img
+						src="./img/Client logos/ef1.svg"
+						alt=""
+						class="logo1 logo"
+					/>
 					<img
 						src="./img/Client logos/WPCCLOGO.svg"
 						alt=""
@@ -290,7 +367,6 @@
 				</div>
 			</section>
 			<section id="skills" class="skills-section">
-				<!-- <h1>SKILLS</h1> -->
 				<h1 class="bg-text dark-item">SKILLS</h1>
 				<div class="skills-wrapper">
 					<div class="skills-card dark-item anim-el anim-up">
@@ -328,7 +404,10 @@
 										filterUnits="userSpaceOnUse"
 									>
 										<feOffset dy="3" input="SourceAlpha" />
-										<feGaussianBlur stdDeviation="3" result="b" />
+										<feGaussianBlur
+											stdDeviation="3"
+											result="b"
+										/>
 										<feFlood flood-opacity="0.161" />
 										<feComposite operator="in" in2="b" />
 										<feComposite in="SourceGraphic" />
@@ -350,9 +429,18 @@
 								maskUnits="userSpaceOnUse"
 							>
 								<defs>
-									<filter id="a" x="0" y="0" width="73.654" height="66.7">
+									<filter
+										id="a"
+										x="0"
+										y="0"
+										width="73.654"
+										height="66.7"
+									>
 										<feOffset dy="3" input="SourceAlpha" />
-										<feGaussianBlur stdDeviation="3" result="b" />
+										<feGaussianBlur
+											stdDeviation="3"
+											result="b"
+										/>
 										<feFlood flood-opacity="0.161" />
 										<feComposite operator="in" in2="b" />
 										<feComposite in="SourceGraphic" />
@@ -394,7 +482,10 @@
 										filterUnits="userSpaceOnUse"
 									>
 										<feOffset dy="3" input="SourceAlpha" />
-										<feGaussianBlur stdDeviation="3" result="b" />
+										<feGaussianBlur
+											stdDeviation="3"
+											result="b"
+										/>
 										<feFlood flood-opacity="0.161" />
 										<feComposite operator="in" in2="b" />
 										<feComposite in="SourceGraphic" />
@@ -425,7 +516,10 @@
 										filterUnits="userSpaceOnUse"
 									>
 										<feOffset dy="3" input="SourceAlpha" />
-										<feGaussianBlur stdDeviation="3" result="b" />
+										<feGaussianBlur
+											stdDeviation="3"
+											result="b"
+										/>
 										<feFlood flood-opacity="0.161" />
 										<feComposite operator="in" in2="b" />
 										<feComposite in="SourceGraphic" />
@@ -468,7 +562,10 @@
 										filterUnits="userSpaceOnUse"
 									>
 										<feOffset dy="3" input="SourceAlpha" />
-										<feGaussianBlur stdDeviation="3" result="b" />
+										<feGaussianBlur
+											stdDeviation="3"
+											result="b"
+										/>
 										<feFlood flood-opacity="0.161" />
 										<feComposite operator="in" in2="b" />
 										<feComposite in="SourceGraphic" />
@@ -499,7 +596,10 @@
 										filterUnits="userSpaceOnUse"
 									>
 										<feOffset dy="3" input="SourceAlpha" />
-										<feGaussianBlur stdDeviation="3" result="b" />
+										<feGaussianBlur
+											stdDeviation="3"
+											result="b"
+										/>
 										<feFlood flood-opacity="0.161" />
 										<feComposite operator="in" in2="b" />
 										<feComposite in="SourceGraphic" />
@@ -564,7 +664,10 @@
 										filterUnits="userSpaceOnUse"
 									>
 										<feOffset dy="3" input="SourceAlpha" />
-										<feGaussianBlur stdDeviation="3" result="b" />
+										<feGaussianBlur
+											stdDeviation="3"
+											result="b"
+										/>
 										<feFlood flood-opacity="0.161" />
 										<feComposite operator="in" in2="b" />
 										<feComposite in="SourceGraphic" />
@@ -595,7 +698,10 @@
 										filterUnits="userSpaceOnUse"
 									>
 										<feOffset dy="3" input="SourceAlpha" />
-										<feGaussianBlur stdDeviation="3" result="b" />
+										<feGaussianBlur
+											stdDeviation="3"
+											result="b"
+										/>
 										<feFlood flood-opacity="0.161" />
 										<feComposite operator="in" in2="b" />
 										<feComposite in="SourceGraphic" />
@@ -756,10 +862,12 @@
 			<section class="testimonial-section">
 				<div class="testimonial-wrapper dark-item">
 					<h2 class="anim-el anim-up">
-						“In under 18 months we have seen a <span>big increase</span> in our
-						social media presence and this is leading to
-						<span>increased number of applications</span> to the college as well
-						as an <span>increase in enrollment</span>.”
+						“In under 18 months we have seen a
+						<span>big increase</span> in our social media presence
+						and this is leading to
+						<span>increased number of applications</span> to the
+						college as well as an
+						<span>increase in enrollment</span>.”
 					</h2>
 					<h4 class="anim-el anim-up">
 						— Dr. Michael Helmick <br />
@@ -773,8 +881,9 @@
 					<div class="photos-overlay dark-item anim-el anim-up">
 						<h3 class="dark-item">I take photos too</h3>
 						<p class="dark-item">
-							Mostly as a hobby, but i've done many professional shoots and have
-							even sold exclusive rights to images.
+							Mostly as a hobby, but i've done many professional
+							shoots and have even sold exclusive rights to
+							images.
 						</p>
 					</div>
 					<div class="photo-grid">
@@ -842,10 +951,11 @@
 							<div class="about-text dark-item">
 								<h2 class="dark-item">About Me</h2>
 								<p>
-									Currently a student at North Carolina State University, I love
-									to tinker and create in whatever form I can. I have a passion
-									for education and plan to build a career around education
-									technologies.
+									Currently a student at North Carolina State
+									University, I love to tinker and create in
+									whatever form I can. I have a passion for
+									education and plan to build a career around
+									education technologies.
 								</p>
 							</div>
 							<div class="about-image"></div>

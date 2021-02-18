@@ -20,9 +20,10 @@ body.light {
 	opacity: 0.8;
 }
 
-.work-card.light {
+.work-card.light,
+.project-card.light {
 	background-color: white;
-	border: 1px solid #dbdbdb;
+	// border: 1px solid #dbdbdb;
 
 	h2,
 	h3,
@@ -53,7 +54,7 @@ body.light {
 
 .skills-list.light > ul > li {
 	color: $bg-color;
-	list-style-image: url("../svg/check-dark.svg");
+	list-style-image: url('../svg/check-dark.svg');
 }
 
 .fas.light {
